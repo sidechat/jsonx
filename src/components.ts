@@ -61,7 +61,7 @@ export let advancedBinding = getAdvancedBinding();
 // require;
 /**
  * object of all react components available for JSONX
- 
+
  */
 //@ts-ignore
 export let componentMap = Object.assign(
@@ -71,9 +71,9 @@ export let componentMap = Object.assign(
 );
 
 /**
- * getBoundedComponents returns reactComponents with certain elements that have this bounded to select components in the boundedComponents list 
- 
- * @param {Object} options - options for getBoundedComponents 
+ * getBoundedComponents returns reactComponents with certain elements that have this bounded to select components in the boundedComponents list
+
+ * @param {Object} options - options for getBoundedComponents
  * @param {Object} options.reactComponents - all react components available for JSONX
  * @param {string[]} boundedComponents - list of components to bind JSONX this context (usually helpful for navigation and redux-router)
  * @returns {Object} reactComponents object of all react components available for JSONX
@@ -87,8 +87,8 @@ export function getBoundedComponents(
   } = {}
 ) {
   const { reactComponents, boundedComponents = [] } = options;
-  if ( 
-    (typeof options.advancedBinding === 'boolean' && options.advancedBinding) || (typeof options.advancedBinding==='undefined' && 
+  if (
+    (typeof options.advancedBinding === 'boolean' && options.advancedBinding) || (typeof options.advancedBinding==='undefined' &&
     advancedBinding)) {
     return Object.assign(
       {},
@@ -107,7 +107,7 @@ export function getBoundedComponents(
 
 /**
  * returns a react component from a component library
- 
+
  * @param {Object} options - options for getComponentFromLibrary
  * @param {Object} [options.componentLibraries={}] - react component library like bootstrap
  * @param {Object} [options.jsonx={}] - any valid JSONX JSON
@@ -148,7 +148,7 @@ export function getComponentFromLibrary(
 
 /**
  * returns a react element from jsonx.component
- 
+
  * @example
  * // returns react elements
  * getComponentFromMap({jsonx:{component:'div'}})=>div
@@ -201,7 +201,7 @@ export function getComponentFromMap(
     ) {
       return getComponentFromLibrary({ jsonx, componentLibraries });
     } else {
-      throw new ReferenceError(`Invalid React Component (${jsonx.component})`);
+      return jsonx.component; // assume if not found, it is a valid instrinsic.
     }
   } catch (e) {
     if (debug) logError(e, e.stack ? e.stack : "no stack");
@@ -211,11 +211,11 @@ export function getComponentFromMap(
 
 /**
  * Returns a new function from an options object
- 
- * @param {Object} options 
+
+ * @param {Object} options
  * @param {String} [options.body=''] - Function string body
  * @param {String[]} [options.args=[]] - Function arguments
- * @returns {Function} 
+ * @returns {Function}
  */
 export function getFunctionFromEval(options: any = {}) {
   if (typeof options === "function") return options;
@@ -231,8 +231,8 @@ export function getFunctionFromEval(options: any = {}) {
 
 /**
  * Returns a new React Component
- 
- * @param {Boolean} [options.returnFactory=true] - returns a React component if true otherwise returns Component Class 
+
+ * @param {Boolean} [options.returnFactory=true] - returns a React component if true otherwise returns Component Class
  * @param {Object} [options.resources={}] - asyncprops for component
  * @param {String} [options.name ] - Component name
  * @param {Function} [options.lazy ] - function that resolves {reactComponent,options} to lazy load component for code splitting
@@ -244,8 +244,8 @@ export function getFunctionFromEval(options: any = {}) {
  * @param {Object} reactComponent.render.body - Valid JSONX JSON
  * @param {String} reactComponent.getDefaultProps.body - return an object for the default props
  * @param {String} reactComponent.getInitialState.body - return an object for the default state
- * @returns {Function} 
- * @see {@link https://reactjs.org/docs/react-without-es6.html} 
+ * @returns {Function}
+ * @see {@link https://reactjs.org/docs/react-without-es6.html}
  */
 export function getReactClassComponent(
   this: defs.Context,
@@ -287,9 +287,9 @@ export function getReactClassComponent(
     },
     componentDidMount: undefined,
     UNSAFE_componentWillMount: undefined,
-    
+
     //updating
-    // (unsupported) getDerivedStateFromProps 
+    // (unsupported) getDerivedStateFromProps
     shouldComponentUpdate: undefined, // {body:'return true;', args:['nextProps','nextState',]}
     getSnapshotBeforeUpdate: undefined, // {body:'return snapshot;', args:['prevProps', 'prevState)',]}
     componentDidUpdate: undefined, // {body:'', args:['prevProps', 'prevState','snapshot')',]}
@@ -302,7 +302,7 @@ export function getReactClassComponent(
     //error handling
     // (unsupported) componentDidCatch:undefined, // { body:'return ;', args:['error','info'] }
     // (unsupported) getDerivedStateFromError: undefined, // {body:' return { hasError:true}', args:['error')',]}
-    
+
     //body
     ...reactComponent
   };
@@ -386,8 +386,8 @@ export function getReactClassComponent(
 
 /**
  * A helper component that allows you to create forms with [react-hook-form](https://react-hook-form.com/) without needed to add external form libraries
- * @param this 
- * @param props 
+ * @param this
+ * @param props
  */
 export function FormComponent(
   this: defs.Context,
@@ -402,7 +402,7 @@ export function FormComponent(
       formWrapperProps,
     } = props;
     const formComponent = {
-      component: "div", 
+      component: "div",
       children: "empty form",
       ...props.formComponent,
     }
@@ -447,9 +447,9 @@ export function FormComponent(
 }
 
 /**
- * A helper component that allows you to create components that load data and render asynchronously. 
- * @param this 
- * @param props 
+ * A helper component that allows you to create components that load data and render asynchronously.
+ * @param this
+ * @param props
  */
 export function DynamicComponent(
   this: defs.Context,
@@ -556,18 +556,18 @@ export function DynamicComponent(
 
 /**
  * Returns new React Function Component
- 
+
  * @todo set 'functionprops' to set arguments for function
  * @param {*} reactComponent - Valid JSONX to render
  * @param {String} functionBody - String of function component body
- * @param {String} options.name - Function Component name 
+ * @param {String} options.name - Function Component name
  * @returns {Function}
  * @see {@link https://reactjs.org/docs/hooks-intro.html}
  * @example
   const jsonxRender = {
    component:'div',
    passprops:'true',
-   children:[ 
+   children:[
      {
       component:'input',
       thisprops:{
@@ -637,15 +637,15 @@ export function getReactFunctionComponent(
     reactComponent,
     resources,
     props,
-    useForm, 
-    useController, 
-    useFieldArray, 
+    useForm,
+    useController,
+    useFieldArray,
     useWatch,
   ];
   //@ts-ignore
   if (typeof functionBody === "function")
     functionBody = functionBody.toString();
-  
+
   const functionComponent = Function(
     "React",
     "useState",
@@ -662,9 +662,9 @@ export function getReactFunctionComponent(
     "reactComponent",
     "resources",
     "props",
-    "useForm", 
-    "useController", 
-    "useFieldArray", 
+    "useForm",
+    "useController",
+    "useFieldArray",
     "useWatch",
     `
     'use strict';
@@ -711,7 +711,7 @@ function myFunc(){
   const a = 1;
   const b = 3;
   return a + b;
-} 
+}
 getFunctionBody(myFunc) => `
   const a = 1;
   const b = 3;
@@ -729,7 +729,7 @@ export function getFunctionBody(func:()=>any){
 
 /**
  * A helpful function that lets you write a regular JavaScript function and passes the appropriate arguments to getReactFunctionComponent
- * @param {Function} func - function definition to turn into React Component Function 
+ * @param {Function} func - function definition to turn into React Component Function
  * @property {object} this - options for getReactElementFromJSONX
  * @returns {Function} - React Component Function
  */
@@ -738,7 +738,7 @@ export function makeFunctionComponent(
   func:()=>any,
   options:any
   ){
-  const scopedEval = eval; 
+  const scopedEval = eval;
   const fullFunctionBody = getFunctionBody(func)
   const [functionBody,] = fullFunctionBody.split('return');
   let reactComponentString = fullFunctionBody.replace(functionBody,'').trim()
@@ -755,8 +755,8 @@ export function getReactContext(options: any = {}) {
 
 /**
  * generates react function components from a json definition
- * @property {object} this 
- * @param customComponent 
+ * @property {object} this
+ * @param customComponent
  * @returns {function} returns react functional component
  */
 export function getCustomFunctionComponent(this: defs.Context, customComponent: Partial<defs.jsonxCustomComponent>): defs.genericComponent{
@@ -774,7 +774,7 @@ export function getCustomFunctionComponent(this: defs.Context, customComponent: 
 
 /**
  * returns a cache key of custom components names
- * @param customComponents 
+ * @param customComponents
  * @returns {string} cachekey
  */
 export function getCustomComponentsCacheKey(customComponents:defs.jsonxCustomComponent[]):string{
@@ -782,10 +782,10 @@ export function getCustomComponentsCacheKey(customComponents:defs.jsonxCustomCom
 }
 
 /**
- * 
- * @param this 
- * @param customComponents 
- * @returns 
+ *
+ * @param this
+ * @param customComponents
+ * @returns
  * @example
  const customComponents = [
    {

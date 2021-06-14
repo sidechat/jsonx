@@ -24,12 +24,12 @@ export declare const generatedCustomComponents: Map<string, defs.jsonx["jsonxCom
 export declare let advancedBinding: boolean;
 /**
  * object of all react components available for JSONX
- 
+
  */
 export declare let componentMap: any;
 /**
  * getBoundedComponents returns reactComponents with certain elements that have this bounded to select components in the boundedComponents list
- 
+
  * @param {Object} options - options for getBoundedComponents
  * @param {Object} options.reactComponents - all react components available for JSONX
  * @param {string[]} boundedComponents - list of components to bind JSONX this context (usually helpful for navigation and redux-router)
@@ -42,7 +42,7 @@ export declare function getBoundedComponents(this: defs.Context, options?: {
 }): any;
 /**
  * returns a react component from a component library
- 
+
  * @param {Object} options - options for getComponentFromLibrary
  * @param {Object} [options.componentLibraries={}] - react component library like bootstrap
  * @param {Object} [options.jsonx={}] - any valid JSONX JSON
@@ -54,7 +54,7 @@ export declare function getComponentFromLibrary(options?: {
 }): any;
 /**
  * returns a react element from jsonx.component
- 
+
  * @example
  * // returns react elements
  * getComponentFromMap({jsonx:{component:'div'}})=>div
@@ -77,7 +77,7 @@ export declare function getComponentFromMap(options?: {
 }): any;
 /**
  * Returns a new function from an options object
- 
+
  * @param {Object} options
  * @param {String} [options.body=''] - Function string body
  * @param {String[]} [options.args=[]] - Function arguments
@@ -86,7 +86,7 @@ export declare function getComponentFromMap(options?: {
 export declare function getFunctionFromEval(options?: any): any;
 /**
  * Returns a new React Component
- 
+
  * @param {Boolean} [options.returnFactory=true] - returns a React component if true otherwise returns Component Class
  * @param {Object} [options.resources={}] - asyncprops for component
  * @param {String} [options.name ] - Component name
@@ -117,7 +117,7 @@ export declare function FormComponent(this: defs.Context, props?: defs.formCompo
 export declare function DynamicComponent(this: defs.Context, props?: defs.dynamicComponentProps): (componentProps: any) => string | defs.JSONReactElement | ReactElementLike | null | undefined;
 /**
  * Returns new React Function Component
- 
+
  * @todo set 'functionprops' to set arguments for function
  * @param {*} reactComponent - Valid JSONX to render
  * @param {String} functionBody - String of function component body

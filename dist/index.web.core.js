@@ -14040,13 +14040,13 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	// require;
 	/**
 	 * object of all react components available for JSONX
-	 
+
 	 */
 	//@ts-ignore
 	let componentMap$1 = Object.assign({ Fragment: React$1.Fragment, Suspense: React$1.Suspense }, ReactDOMElements, window && typeof window === "object" ? window.__jsonx_custom_elements : {});
 	/**
 	 * getBoundedComponents returns reactComponents with certain elements that have this bounded to select components in the boundedComponents list
-	 
+
 	 * @param {Object} options - options for getBoundedComponents
 	 * @param {Object} options.reactComponents - all react components available for JSONX
 	 * @param {string[]} boundedComponents - list of components to bind JSONX this context (usually helpful for navigation and redux-router)
@@ -14067,7 +14067,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	}
 	/**
 	 * returns a react component from a component library
-	 
+
 	 * @param {Object} options - options for getComponentFromLibrary
 	 * @param {Object} [options.componentLibraries={}] - react component library like bootstrap
 	 * @param {Object} [options.jsonx={}] - any valid JSONX JSON
@@ -14095,7 +14095,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	}
 	/**
 	 * returns a react element from jsonx.component
-	 
+
 	 * @example
 	 * // returns react elements
 	 * getComponentFromMap({jsonx:{component:'div'}})=>div
@@ -14133,7 +14133,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	            return getComponentFromLibrary({ jsonx, componentLibraries });
 	        }
 	        else {
-	            throw new ReferenceError(`Invalid React Component (${jsonx.component})`);
+	            return jsonx.component; // assume if not found, it is a valid instrinsic.
 	        }
 	    }
 	    catch (e) {
@@ -14144,7 +14144,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	}
 	/**
 	 * Returns a new function from an options object
-	 
+
 	 * @param {Object} options
 	 * @param {String} [options.body=''] - Function string body
 	 * @param {String[]} [options.args=[]] - Function arguments
@@ -14164,7 +14164,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	}
 	/**
 	 * Returns a new React Component
-	 
+
 	 * @param {Boolean} [options.returnFactory=true] - returns a React component if true otherwise returns Component Class
 	 * @param {Object} [options.resources={}] - asyncprops for component
 	 * @param {String} [options.name ] - Component name
@@ -14209,7 +14209,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	        componentDidMount: undefined,
 	        UNSAFE_componentWillMount: undefined,
 	        //updating
-	        // (unsupported) getDerivedStateFromProps 
+	        // (unsupported) getDerivedStateFromProps
 	        shouldComponentUpdate: undefined,
 	        getSnapshotBeforeUpdate: undefined,
 	        componentDidUpdate: undefined,
@@ -14438,7 +14438,7 @@ var jsonx = (function (exports, React$1, ReactDOM) {
 	}
 	/**
 	 * Returns new React Function Component
-	 
+
 	 * @todo set 'functionprops' to set arguments for function
 	 * @param {*} reactComponent - Valid JSONX to render
 	 * @param {String} functionBody - String of function component body
