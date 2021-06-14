@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./build",
+    "declarationDir": "./dist",
     "outDir": "./build",
     "target": "esnext",
     "lib": [

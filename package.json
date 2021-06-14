@@ -7,7 +7,9 @@
   "esm": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "web": "dist/index.web.js",
+  "types": "dist/index.d.ts",
   "modules.root": "build",
+  "files": ["dist/*"],
   "type": "module",
   "scripts": {
     "dev": "rollup -c -w",
