@@ -2,7 +2,7 @@
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-dom')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-dom'], factory) :
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((typeof global!=="undefined" ? global : window).jsonx = {}, (typeof global!=="undefined" ? global : window).React, (typeof global!=="undefined" ? global : window).ReactDOM));
-}(this, (function (exports, React, ReactDOM) { 'use strict';
+}(this, (function (exports, React$1, ReactDOM) { 'use strict';
 
 	function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -26,8 +26,8 @@
 		return Object.freeze(n);
 	}
 
-	var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-	var React__namespace = /*#__PURE__*/_interopNamespace(React);
+	var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
+	var React__namespace = /*#__PURE__*/_interopNamespace(React$1);
 	var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 
 	var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -47,10 +47,9 @@
 		return a;
 	}
 
-	function createCommonjsModule(fn) {
-	  var module = { exports: {} };
-		return fn(module, module.exports), module.exports;
-	}
+	var server_node = {exports: {}};
+
+	var reactDomServer_node_production_min = {};
 
 	/*
 	object-assign
@@ -5120,7 +5119,7 @@
 		Stream: Stream
 	});
 
-	var aa = /*@__PURE__*/getAugmentedNamespace(stream);
+	var require$$2 = /*@__PURE__*/getAugmentedNamespace(stream);
 
 	/** @license React v17.0.2
 	 * react-dom-server.node.production.min.js
@@ -5130,11 +5129,11 @@
 	 * This source code is licensed under the MIT license found in the
 	 * LICENSE file in the root directory of this source tree.
 	 */
-	function p(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return "Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
+	var l$1=objectAssign,n$1=React__default['default'],aa=require$$2;function p(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return "Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 	var q=60106,r=60107,u=60108,z=60114,B=60109,ba=60110,ca=60112,D=60113,da=60120,ea=60115,fa=60116,ha=60121,ia=60117,ja=60119,ka=60129,la=60131;
 	if("function"===typeof Symbol&&Symbol.for){var E=Symbol.for;q=E("react.portal");r=E("react.fragment");u=E("react.strict_mode");z=E("react.profiler");B=E("react.provider");ba=E("react.context");ca=E("react.forward_ref");D=E("react.suspense");da=E("react.suspense_list");ea=E("react.memo");fa=E("react.lazy");ha=E("react.block");ia=E("react.fundamental");ja=E("react.scope");ka=E("react.debug_trace_mode");la=E("react.legacy_hidden");}
 	function F(a){if(null==a)return null;if("function"===typeof a)return a.displayName||a.name||null;if("string"===typeof a)return a;switch(a){case r:return "Fragment";case q:return "Portal";case z:return "Profiler";case u:return "StrictMode";case D:return "Suspense";case da:return "SuspenseList"}if("object"===typeof a)switch(a.$$typeof){case ba:return (a.displayName||"Context")+".Consumer";case B:return (a._context.displayName||"Context")+".Provider";case ca:var b=a.render;b=b.displayName||b.name||"";return a.displayName||
-	(""!==b?"ForwardRef("+b+")":"ForwardRef");case ea:return F(a.type);case ha:return F(a._render);case fa:b=a._payload;a=a._init;try{return F(a(b))}catch(c){}}return null}var ma=React__default['default'].__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,na={};function I(a,b){for(var c=a._threadCount|0;c<=b;c++)a[c]=a._currentValue2,a._threadCount=c+1;}function oa(a,b,c,d){if(d&&(d=a.contextType,"object"===typeof d&&null!==d))return I(d,c),d[c];if(a=a.contextTypes){c={};for(var f in a)c[f]=b[f];b=c;}else b=na;return b}
+	(""!==b?"ForwardRef("+b+")":"ForwardRef");case ea:return F(a.type);case ha:return F(a._render);case fa:b=a._payload;a=a._init;try{return F(a(b))}catch(c){}}return null}var ma=n$1.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,na={};function I(a,b){for(var c=a._threadCount|0;c<=b;c++)a[c]=a._currentValue2,a._threadCount=c+1;}function oa(a,b,c,d){if(d&&(d=a.contextType,"object"===typeof d&&null!==d))return I(d,c),d[c];if(a=a.contextTypes){c={};for(var f in a)c[f]=b[f];b=c;}else b=na;return b}
 	for(var J=new Uint16Array(16),K=0;15>K;K++)J[K]=K+1;J[15]=0;var pa=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,qa=Object.prototype.hasOwnProperty,ra={},sa={};
 	function ta(a){if(qa.call(sa,a))return !0;if(qa.call(ra,a))return !1;if(pa.test(a))return sa[a]=!0;ra[a]=!0;return !1}function ua(a,b,c,d){if(null!==c&&0===c.type)return !1;switch(typeof b){case "function":case "symbol":return !0;case "boolean":if(d)return !1;if(null!==c)return !c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return "data-"!==a&&"aria-"!==a;default:return !1}}
 	function va(a,b,c,d){if(null===b||"undefined"===typeof b||ua(a,b,c,d))return !0;if(d)return !1;if(null!==c)switch(c.type){case 3:return !b;case 4:return !1===b;case 5:return isNaN(b);case 6:return isNaN(b)||1>b}return !1}function M(a,b,c,d,f,h,t){this.acceptsBooleans=2===b||3===b||4===b;this.attributeName=d;this.attributeNamespace=f;this.mustUseProperty=c;this.propertyName=a;this.type=b;this.sanitizeURL=h;this.removeEmptyString=t;}var N={};
@@ -5151,46 +5150,35 @@
 	function Ja(a,b){P=W();R=Da();b=void 0===b?null:b;if(null!==R){var c=R.memoizedState;if(null!==c&&null!==b){var d=c[1];a:if(null===d)d=!1;else {for(var f=0;f<d.length&&f<b.length;f++)if(!Ba(b[f],d[f])){d=!1;break a}d=!0;}if(d)return c[0]}}a=a();R.memoizedState=[a,b];return a}function Ia(a,b,c){if(!(25>V))throw Error(p(301));if(a===P)if(T=!0,a={action:c,next:null},null===U&&(U=new Map),c=U.get(b),void 0===c)U.set(b,a);else {for(b=c;null!==b.next;)b=b.next;b.next=a;}}function Ka(){}
 	var X=null,La={readContext:function(a){var b=X.threadID;I(a,b);return a[b]},useContext:function(a){W();var b=X.threadID;I(a,b);return a[b]},useMemo:Ja,useReducer:Ha,useRef:function(a){P=W();R=Da();var b=R.memoizedState;return null===b?(a={current:a},R.memoizedState=a):b},useState:function(a){return Ha(Ga,a)},useLayoutEffect:function(){},useCallback:function(a,b){return Ja(function(){return a},b)},useImperativeHandle:Ka,useEffect:Ka,useDebugValue:Ka,useDeferredValue:function(a){W();return a},useTransition:function(){W();
 	return [function(a){a();},!1]},useOpaqueIdentifier:function(){return (X.identifierPrefix||"")+"R:"+(X.uniqueID++).toString(36)},useMutableSource:function(a,b){W();return b(a._source)}},Ma={html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"};function Na(a){switch(a){case "svg":return "http://www.w3.org/2000/svg";case "math":return "http://www.w3.org/1998/Math/MathML";default:return "http://www.w3.org/1999/xhtml"}}
-	var Oa={area:!0,base:!0,br:!0,col:!0,embed:!0,hr:!0,img:!0,input:!0,keygen:!0,link:!0,meta:!0,param:!0,source:!0,track:!0,wbr:!0},Pa=objectAssign({menuitem:!0},Oa),Y={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPositive:!0,flexShrink:!0,flexNegative:!0,flexOrder:!0,gridArea:!0,gridRow:!0,gridRowEnd:!0,gridRowSpan:!0,gridRowStart:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnSpan:!0,
+	var Oa={area:!0,base:!0,br:!0,col:!0,embed:!0,hr:!0,img:!0,input:!0,keygen:!0,link:!0,meta:!0,param:!0,source:!0,track:!0,wbr:!0},Pa=l$1({menuitem:!0},Oa),Y={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPositive:!0,flexShrink:!0,flexNegative:!0,flexOrder:!0,gridArea:!0,gridRow:!0,gridRowEnd:!0,gridRowSpan:!0,gridRowStart:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnSpan:!0,
 	gridColumnStart:!0,fontWeight:!0,lineClamp:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,tabSize:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,floodOpacity:!0,stopOpacity:!0,strokeDasharray:!0,strokeDashoffset:!0,strokeMiterlimit:!0,strokeOpacity:!0,strokeWidth:!0},Qa=["Webkit","ms","Moz","O"];Object.keys(Y).forEach(function(a){Qa.forEach(function(b){b=b+a.charAt(0).toUpperCase()+a.substring(1);Y[b]=Y[a];});});
-	var Ra=/([A-Z])/g,Sa=/^ms-/,Z=React__default['default'].Children.toArray,Ta=ma.ReactCurrentDispatcher,Ua={listing:!0,pre:!0,textarea:!0},Va=/^[a-zA-Z][a-zA-Z:_\.\-\d]*$/,Wa={},Xa={};function Ya(a){if(void 0===a||null===a)return a;var b="";React__default['default'].Children.forEach(a,function(a){null!=a&&(b+=a);});return b}var Za=Object.prototype.hasOwnProperty,$a={children:null,dangerouslySetInnerHTML:null,suppressContentEditableWarning:null,suppressHydrationWarning:null};function ab(a,b){if(void 0===a)throw Error(p(152,F(b)||"Component"));}
-	function bb(a,b,c){function d(d,h){var e=h.prototype&&h.prototype.isReactComponent,f=oa(h,b,c,e),t=[],g=!1,m={isMounted:function(){return !1},enqueueForceUpdate:function(){if(null===t)return null},enqueueReplaceState:function(a,b){g=!0;t=[b];},enqueueSetState:function(a,b){if(null===t)return null;t.push(b);}};if(e){if(e=new h(d.props,f,m),"function"===typeof h.getDerivedStateFromProps){var k=h.getDerivedStateFromProps.call(null,d.props,e.state);null!=k&&(e.state=objectAssign({},e.state,k));}}else if(P={},e=h(d.props,
+	var Ra=/([A-Z])/g,Sa=/^ms-/,Z=n$1.Children.toArray,Ta=ma.ReactCurrentDispatcher,Ua={listing:!0,pre:!0,textarea:!0},Va=/^[a-zA-Z][a-zA-Z:_\.\-\d]*$/,Wa={},Xa={};function Ya(a){if(void 0===a||null===a)return a;var b="";n$1.Children.forEach(a,function(a){null!=a&&(b+=a);});return b}var Za=Object.prototype.hasOwnProperty,$a={children:null,dangerouslySetInnerHTML:null,suppressContentEditableWarning:null,suppressHydrationWarning:null};function ab(a,b){if(void 0===a)throw Error(p(152,F(b)||"Component"));}
+	function bb(a,b,c){function d(d,h){var e=h.prototype&&h.prototype.isReactComponent,f=oa(h,b,c,e),t=[],g=!1,m={isMounted:function(){return !1},enqueueForceUpdate:function(){if(null===t)return null},enqueueReplaceState:function(a,b){g=!0;t=[b];},enqueueSetState:function(a,b){if(null===t)return null;t.push(b);}};if(e){if(e=new h(d.props,f,m),"function"===typeof h.getDerivedStateFromProps){var k=h.getDerivedStateFromProps.call(null,d.props,e.state);null!=k&&(e.state=l$1({},e.state,k));}}else if(P={},e=h(d.props,
 	f,m),e=Ea(h,d.props,e,f),null==e||null==e.render){a=e;ab(a,h);return}e.props=d.props;e.context=f;e.updater=m;m=e.state;void 0===m&&(e.state=m=null);if("function"===typeof e.UNSAFE_componentWillMount||"function"===typeof e.componentWillMount)if("function"===typeof e.componentWillMount&&"function"!==typeof h.getDerivedStateFromProps&&e.componentWillMount(),"function"===typeof e.UNSAFE_componentWillMount&&"function"!==typeof h.getDerivedStateFromProps&&e.UNSAFE_componentWillMount(),t.length){m=t;var v=
-	g;t=null;g=!1;if(v&&1===m.length)e.state=m[0];else {k=v?m[0]:e.state;var H=!0;for(v=v?1:0;v<m.length;v++){var x=m[v];x="function"===typeof x?x.call(e,k,d.props,f):x;null!=x&&(H?(H=!1,k=objectAssign({},k,x)):objectAssign(k,x));}e.state=k;}}else t=null;a=e.render();ab(a,h);if("function"===typeof e.getChildContext&&(d=h.childContextTypes,"object"===typeof d)){var y=e.getChildContext();for(var A in y)if(!(A in d))throw Error(p(108,F(h)||"Unknown",A));}y&&(b=objectAssign({},b,y));}for(;React__default['default'].isValidElement(a);){var f=a,h=f.type;if("function"!==
+	g;t=null;g=!1;if(v&&1===m.length)e.state=m[0];else {k=v?m[0]:e.state;var H=!0;for(v=v?1:0;v<m.length;v++){var x=m[v];x="function"===typeof x?x.call(e,k,d.props,f):x;null!=x&&(H?(H=!1,k=l$1({},k,x)):l$1(k,x));}e.state=k;}}else t=null;a=e.render();ab(a,h);if("function"===typeof e.getChildContext&&(d=h.childContextTypes,"object"===typeof d)){var y=e.getChildContext();for(var A in y)if(!(A in d))throw Error(p(108,F(h)||"Unknown",A));}y&&(b=l$1({},b,y));}for(;n$1.isValidElement(a);){var f=a,h=f.type;if("function"!==
 	typeof h)break;d(f,h);}return {child:a,context:b}}
-	var cb=function(){function a(a,b,f){React__default['default'].isValidElement(a)?a.type!==r?a=[a]:(a=a.props.children,a=React__default['default'].isValidElement(a)?[a]:Z(a)):a=Z(a);a={type:null,domNamespace:Ma.html,children:a,childIndex:0,context:na,footer:""};var c=J[0];if(0===c){var d=J;c=d.length;var g=2*c;if(!(65536>=g))throw Error(p(304));var e=new Uint16Array(g);e.set(d);J=e;J[0]=c+1;for(d=c;d<g-1;d++)J[d]=d+1;J[g-1]=0;}else J[0]=J[c];this.threadID=c;this.stack=[a];this.exhausted=!1;this.currentSelectValue=null;this.previousWasTextNode=!1;
+	var cb=function(){function a(a,b,f){n$1.isValidElement(a)?a.type!==r?a=[a]:(a=a.props.children,a=n$1.isValidElement(a)?[a]:Z(a)):a=Z(a);a={type:null,domNamespace:Ma.html,children:a,childIndex:0,context:na,footer:""};var c=J[0];if(0===c){var d=J;c=d.length;var g=2*c;if(!(65536>=g))throw Error(p(304));var e=new Uint16Array(g);e.set(d);J=e;J[0]=c+1;for(d=c;d<g-1;d++)J[d]=d+1;J[g-1]=0;}else J[0]=J[c];this.threadID=c;this.stack=[a];this.exhausted=!1;this.currentSelectValue=null;this.previousWasTextNode=!1;
 	this.makeStaticMarkup=b;this.suspenseDepth=0;this.contextIndex=-1;this.contextStack=[];this.contextValueStack=[];this.uniqueID=0;this.identifierPrefix=f&&f.identifierPrefix||"";}var b=a.prototype;b.destroy=function(){if(!this.exhausted){this.exhausted=!0;this.clearProviders();var a=this.threadID;J[a]=J[0];J[0]=a;}};b.pushProvider=function(a){var b=++this.contextIndex,c=a.type._context,h=this.threadID;I(c,h);var t=c[h];this.contextStack[b]=c;this.contextValueStack[b]=t;c[h]=a.props.value;};b.popProvider=
 	function(){var a=this.contextIndex,b=this.contextStack[a],f=this.contextValueStack[a];this.contextStack[a]=null;this.contextValueStack[a]=null;this.contextIndex--;b[this.threadID]=f;};b.clearProviders=function(){for(var a=this.contextIndex;0<=a;a--)this.contextStack[a][this.threadID]=this.contextValueStack[a];};b.read=function(a){if(this.exhausted)return null;var b=X;X=this;var c=Ta.current;Ta.current=La;try{for(var h=[""],t=!1;h[0].length<a;){if(0===this.stack.length){this.exhausted=!0;var g=this.threadID;
 	J[g]=J[0];J[0]=g;break}var e=this.stack[this.stack.length-1];if(t||e.childIndex>=e.children.length){var L=e.footer;""!==L&&(this.previousWasTextNode=!1);this.stack.pop();if("select"===e.type)this.currentSelectValue=null;else if(null!=e.type&&null!=e.type.type&&e.type.type.$$typeof===B)this.popProvider(e.type);else if(e.type===D){this.suspenseDepth--;var G=h.pop();if(t){t=!1;var C=e.fallbackFrame;if(!C)throw Error(p(303));this.stack.push(C);h[this.suspenseDepth]+="\x3c!--$!--\x3e";continue}else h[this.suspenseDepth]+=
 	G;}h[this.suspenseDepth]+=L;}else {var m=e.children[e.childIndex++],k="";try{k+=this.render(m,e.context,e.domNamespace);}catch(v){if(null!=v&&"function"===typeof v.then)throw Error(p(294));throw v;}finally{}h.length<=this.suspenseDepth&&h.push("");h[this.suspenseDepth]+=k;}}return h[0]}finally{Ta.current=c,X=b,Fa();}};b.render=function(a,b,f){if("string"===typeof a||"number"===typeof a){f=""+a;if(""===f)return "";if(this.makeStaticMarkup)return O(f);if(this.previousWasTextNode)return "\x3c!-- --\x3e"+O(f);
-	this.previousWasTextNode=!0;return O(f)}b=bb(a,b,this.threadID);a=b.child;b=b.context;if(null===a||!1===a)return "";if(!React__default['default'].isValidElement(a)){if(null!=a&&null!=a.$$typeof){f=a.$$typeof;if(f===q)throw Error(p(257));throw Error(p(258,f.toString()));}a=Z(a);this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""});return ""}var c=a.type;if("string"===typeof c)return this.renderDOM(a,b,f);switch(c){case la:case ka:case u:case z:case da:case r:return a=Z(a.props.children),this.stack.push({type:null,
-	domNamespace:f,children:a,childIndex:0,context:b,footer:""}),"";case D:throw Error(p(294));case ja:throw Error(p(343));}if("object"===typeof c&&null!==c)switch(c.$$typeof){case ca:P={};var d=c.render(a.props,a.ref);d=Ea(c.render,a.props,d,a.ref);d=Z(d);this.stack.push({type:null,domNamespace:f,children:d,childIndex:0,context:b,footer:""});return "";case ea:return a=[React__default['default'].createElement(c.type,objectAssign({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),
-	"";case B:return c=Z(a.props.children),f={type:a,domNamespace:f,children:c,childIndex:0,context:b,footer:""},this.pushProvider(a),this.stack.push(f),"";case ba:c=a.type;d=a.props;var g=this.threadID;I(c,g);c=Z(d.children(c[g]));this.stack.push({type:a,domNamespace:f,children:c,childIndex:0,context:b,footer:""});return "";case ia:throw Error(p(338));case fa:return c=a.type,d=c._init,c=d(c._payload),a=[React__default['default'].createElement(c,objectAssign({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,
-	context:b,footer:""}),""}throw Error(p(130,null==c?c:typeof c,""));};b.renderDOM=function(a,b,f){var c=a.type.toLowerCase();if(!Wa.hasOwnProperty(c)){if(!Va.test(c))throw Error(p(65,c));Wa[c]=!0;}var d=a.props;if("input"===c)d=objectAssign({type:void 0},d,{defaultChecked:void 0,defaultValue:void 0,value:null!=d.value?d.value:d.defaultValue,checked:null!=d.checked?d.checked:d.defaultChecked});else if("textarea"===c){var g=d.value;if(null==g){g=d.defaultValue;var e=d.children;if(null!=e){if(null!=
-	g)throw Error(p(92));if(Array.isArray(e)){if(!(1>=e.length))throw Error(p(93));e=e[0];}g=""+e;}null==g&&(g="");}d=objectAssign({},d,{value:void 0,children:""+g});}else if("select"===c)this.currentSelectValue=null!=d.value?d.value:d.defaultValue,d=objectAssign({},d,{value:void 0});else if("option"===c){e=this.currentSelectValue;var L=Ya(d.children);if(null!=e){var G=null!=d.value?d.value+"":L;g=!1;if(Array.isArray(e))for(var C=0;C<e.length;C++){if(""+e[C]===G){g=!0;break}}else g=""+e===G;d=objectAssign({selected:void 0,children:void 0},
+	this.previousWasTextNode=!0;return O(f)}b=bb(a,b,this.threadID);a=b.child;b=b.context;if(null===a||!1===a)return "";if(!n$1.isValidElement(a)){if(null!=a&&null!=a.$$typeof){f=a.$$typeof;if(f===q)throw Error(p(257));throw Error(p(258,f.toString()));}a=Z(a);this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""});return ""}var c=a.type;if("string"===typeof c)return this.renderDOM(a,b,f);switch(c){case la:case ka:case u:case z:case da:case r:return a=Z(a.props.children),this.stack.push({type:null,
+	domNamespace:f,children:a,childIndex:0,context:b,footer:""}),"";case D:throw Error(p(294));case ja:throw Error(p(343));}if("object"===typeof c&&null!==c)switch(c.$$typeof){case ca:P={};var d=c.render(a.props,a.ref);d=Ea(c.render,a.props,d,a.ref);d=Z(d);this.stack.push({type:null,domNamespace:f,children:d,childIndex:0,context:b,footer:""});return "";case ea:return a=[n$1.createElement(c.type,l$1({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),
+	"";case B:return c=Z(a.props.children),f={type:a,domNamespace:f,children:c,childIndex:0,context:b,footer:""},this.pushProvider(a),this.stack.push(f),"";case ba:c=a.type;d=a.props;var g=this.threadID;I(c,g);c=Z(d.children(c[g]));this.stack.push({type:a,domNamespace:f,children:c,childIndex:0,context:b,footer:""});return "";case ia:throw Error(p(338));case fa:return c=a.type,d=c._init,c=d(c._payload),a=[n$1.createElement(c,l$1({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,
+	context:b,footer:""}),""}throw Error(p(130,null==c?c:typeof c,""));};b.renderDOM=function(a,b,f){var c=a.type.toLowerCase();if(!Wa.hasOwnProperty(c)){if(!Va.test(c))throw Error(p(65,c));Wa[c]=!0;}var d=a.props;if("input"===c)d=l$1({type:void 0},d,{defaultChecked:void 0,defaultValue:void 0,value:null!=d.value?d.value:d.defaultValue,checked:null!=d.checked?d.checked:d.defaultChecked});else if("textarea"===c){var g=d.value;if(null==g){g=d.defaultValue;var e=d.children;if(null!=e){if(null!=
+	g)throw Error(p(92));if(Array.isArray(e)){if(!(1>=e.length))throw Error(p(93));e=e[0];}g=""+e;}null==g&&(g="");}d=l$1({},d,{value:void 0,children:""+g});}else if("select"===c)this.currentSelectValue=null!=d.value?d.value:d.defaultValue,d=l$1({},d,{value:void 0});else if("option"===c){e=this.currentSelectValue;var L=Ya(d.children);if(null!=e){var G=null!=d.value?d.value+"":L;g=!1;if(Array.isArray(e))for(var C=0;C<e.length;C++){if(""+e[C]===G){g=!0;break}}else g=""+e===G;d=l$1({selected:void 0,children:void 0},
 	d,{selected:g,children:L});}}if(g=d){if(Pa[c]&&(null!=g.children||null!=g.dangerouslySetInnerHTML))throw Error(p(137,c));if(null!=g.dangerouslySetInnerHTML){if(null!=g.children)throw Error(p(60));if(!("object"===typeof g.dangerouslySetInnerHTML&&"__html"in g.dangerouslySetInnerHTML))throw Error(p(61));}if(null!=g.style&&"object"!==typeof g.style)throw Error(p(62));}g=d;e=this.makeStaticMarkup;L=1===this.stack.length;G="<"+a.type;b:if(-1===c.indexOf("-"))C="string"===typeof g.is;else switch(c){case "annotation-xml":case "color-profile":case "font-face":case "font-face-src":case "font-face-uri":case "font-face-format":case "font-face-name":case "missing-glyph":C=
 	!1;break b;default:C=!0;}for(w in g)if(Za.call(g,w)){var m=g[w];if(null!=m){if("style"===w){var k=void 0,v="",H="";for(k in m)if(m.hasOwnProperty(k)){var x=0===k.indexOf("--"),y=m[k];if(null!=y){if(x)var A=k;else if(A=k,Xa.hasOwnProperty(A))A=Xa[A];else {var eb=A.replace(Ra,"-$1").toLowerCase().replace(Sa,"-ms-");A=Xa[A]=eb;}v+=H+A+":";H=k;x=null==y||"boolean"===typeof y||""===y?"":x||"number"!==typeof y||0===y||Y.hasOwnProperty(H)&&Y[H]?(""+y).trim():y+"px";v+=x;H=";";}}m=v||null;}k=null;C?$a.hasOwnProperty(w)||
 	(k=w,k=ta(k)&&null!=m?k+'="'+(O(m)+'"'):""):k=za(w,m);k&&(G+=" "+k);}}e||L&&(G+=' data-reactroot=""');var w=G;g="";Oa.hasOwnProperty(c)?w+="/>":(w+=">",g="</"+a.type+">");a:{e=d.dangerouslySetInnerHTML;if(null!=e){if(null!=e.__html){e=e.__html;break a}}else if(e=d.children,"string"===typeof e||"number"===typeof e){e=O(e);break a}e=null;}null!=e?(d=[],Ua.hasOwnProperty(c)&&"\n"===e.charAt(0)&&(w+="\n"),w+=e):d=Z(d.children);a=a.type;f=null==f||"http://www.w3.org/1999/xhtml"===f?Na(a):"http://www.w3.org/2000/svg"===
 	f&&"foreignObject"===a?"http://www.w3.org/1999/xhtml":f;this.stack.push({domNamespace:f,type:c,children:d,childIndex:0,context:b,footer:g});this.previousWasTextNode=!1;return w};return a}();function db(a,b){a.prototype=Object.create(b.prototype);a.prototype.constructor=a;a.__proto__=b;}
-	var fb=function(a){function b(b,c,h){var d=a.call(this,{})||this;d.partialRenderer=new cb(b,c,h);return d}db(b,a);var c=b.prototype;c._destroy=function(a,b){this.partialRenderer.destroy();b(a);};c._read=function(a){try{this.push(this.partialRenderer.read(a));}catch(f){this.destroy(f);}};return b}(aa.Readable);var renderToNodeStream=function(a,b){return new fb(a,!1,b)};var renderToStaticMarkup=function(a,b){a=new cb(a,!0,b);try{return a.read(Infinity)}finally{a.destroy();}};
-	var renderToStaticNodeStream=function(a,b){return new fb(a,!0,b)};var renderToString=function(a,b){a=new cb(a,!1,b);try{return a.read(Infinity)}finally{a.destroy();}};var version="17.0.2";
-
-	var reactDomServer_node_production_min = {
-		renderToNodeStream: renderToNodeStream,
-		renderToStaticMarkup: renderToStaticMarkup,
-		renderToStaticNodeStream: renderToStaticNodeStream,
-		renderToString: renderToString,
-		version: version
-	};
-
-	var server_node = createCommonjsModule(function (module) {
+	var fb=function(a){function b(b,c,h){var d=a.call(this,{})||this;d.partialRenderer=new cb(b,c,h);return d}db(b,a);var c=b.prototype;c._destroy=function(a,b){this.partialRenderer.destroy();b(a);};c._read=function(a){try{this.push(this.partialRenderer.read(a));}catch(f){this.destroy(f);}};return b}(aa.Readable);reactDomServer_node_production_min.renderToNodeStream=function(a,b){return new fb(a,!1,b)};reactDomServer_node_production_min.renderToStaticMarkup=function(a,b){a=new cb(a,!0,b);try{return a.read(Infinity)}finally{a.destroy();}};
+	reactDomServer_node_production_min.renderToStaticNodeStream=function(a,b){return new fb(a,!0,b)};reactDomServer_node_production_min.renderToString=function(a,b){a=new cb(a,!1,b);try{return a.read(Infinity)}finally{a.destroy();}};reactDomServer_node_production_min.version="17.0.2";
 
 	{
-	  module.exports = reactDomServer_node_production_min;
+	  server_node.exports = reactDomServer_node_production_min;
 	}
-	});
 
-	var server = server_node;
+	var server = server_node.exports;
 
 	/*! *****************************************************************************
 	Copyright (c) Microsoft Corporation.
@@ -5216,6 +5204,8 @@
 	        step((generator = generator.apply(thisArg, _arguments || [])).next());
 	    });
 	}
+
+	var memoryCache = {exports: {}};
 
 	function Cache () {
 	  var _cache = Object.create(null);
@@ -5403,9 +5393,8 @@
 	  };
 	}
 
-	var memoryCache = new Cache();
-	var Cache_1 = Cache;
-	memoryCache.Cache = Cache_1;
+	memoryCache.exports = new Cache();
+	var Cache_1 = memoryCache.exports.Cache = Cache;
 
 	var isCheckBoxInput = (element) => element.type === 'checkbox';
 
@@ -5431,13 +5420,16 @@
 
 	var isUndefined$1 = (val) => val === undefined;
 
-	var get = (obj = {}, path, defaultValue) => {
-	    const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => (isNullOrUndefined(result) ? result : result[key]), obj);
-	    return isUndefined$1(result) || result === obj
-	        ? isUndefined$1(obj[path])
-	            ? defaultValue
-	            : obj[path]
-	        : result;
+	var get = (obj, path, defaultValue) => {
+	    if (isObject(obj) && path) {
+	        const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => (isNullOrUndefined(result) ? result : result[key]), obj);
+	        return isUndefined$1(result) || result === obj
+	            ? isUndefined$1(obj[path])
+	                ? defaultValue
+	                : obj[path]
+	            : result;
+	    }
+	    return undefined;
 	};
 
 	const EVENTS = {
@@ -5451,8 +5443,6 @@
 	    onTouched: 'onTouched',
 	    all: 'all',
 	};
-	const SELECT = 'select';
-	const UNDEFINED = 'undefined';
 	const INPUT_VALIDATION_RULES = {
 	    max: 'max',
 	    min: 'min',
@@ -5503,16 +5493,16 @@
 
 	var convertToArrayPayload = (value) => Array.isArray(value) ? value : [value];
 
-	var isWeb = typeof window !== UNDEFINED &&
-	    typeof window.HTMLElement !== UNDEFINED &&
-	    typeof document !== UNDEFINED;
+	var isWeb = typeof window !== 'undefined' &&
+	    typeof window.HTMLElement !== 'undefined' &&
+	    typeof document !== 'undefined';
 
-	const isProxyEnabled = isWeb ? 'Proxy' in window : typeof Proxy !== UNDEFINED;
+	const isProxyEnabled = isWeb ? 'Proxy' in window : typeof Proxy !== 'undefined';
 
 	function useFormState(props) {
 	    const { control, name } = props || {};
 	    const methods = useFormContext();
-	    const { formStateRef, formStateSubjectRef, readFormStateRef } = control || methods.control;
+	    const { formStateRef, subjectsRef, readFormStateRef } = control || methods.control;
 	    const nameRef = React__namespace.useRef(name);
 	    nameRef.current = name;
 	    const [formState, updateFormState] = React__namespace.useState(formStateRef.current);
@@ -5525,7 +5515,7 @@
 	        errors: false,
 	    });
 	    React__namespace.useEffect(() => {
-	        const formStateSubscription = formStateSubjectRef.current.subscribe({
+	        const formStateSubscription = subjectsRef.current.state.subscribe({
 	            next: (formState) => (!nameRef.current ||
 	                !formState.name ||
 	                convertToArrayPayload(nameRef.current).includes(formState.name)) &&
@@ -5539,27 +5529,35 @@
 
 	function useController({ name, rules, defaultValue, control, shouldUnregister, }) {
 	    const methods = useFormContext();
-	    const { defaultValuesRef, register, fieldsRef, unregister, fieldArrayNamesRef, controllerSubjectRef, shouldUnmountUnregister, } = control || methods.control;
-	    const { onChange, onBlur, ref } = register(name, rules);
-	    const [value, setInputStateValue] = React__namespace.useState(isUndefined$1(get(fieldsRef.current, name)._f.value) ||
-	        isNameInFieldArray(fieldArrayNamesRef.current, name)
-	        ? isUndefined$1(defaultValue)
-	            ? get(defaultValuesRef.current, name)
-	            : defaultValue
-	        : get(fieldsRef.current, name)._f.value);
+	    const { defaultValuesRef, register, fieldsRef, unregister, namesRef, subjectsRef, shouldUnmount, inFieldArrayActionRef, } = control || methods.control;
+	    const isFieldArray = isNameInFieldArray(namesRef.current.array, name);
+	    const field = get(fieldsRef.current, name);
+	    const [value, setInputStateValue] = React__namespace.useState(isFieldArray || !field || !field._f
+	        ? isFieldArray || isUndefined$1(get(defaultValuesRef.current, name))
+	            ? defaultValue
+	            : get(defaultValuesRef.current, name)
+	        : field._f.value);
+	    const { onChange, onBlur, ref } = register(name, Object.assign(Object.assign({}, rules), { value }));
 	    const formState = useFormState({
 	        control: control || methods.control,
 	        name,
 	    });
-	    get(fieldsRef.current, name)._f.value = value;
 	    React__namespace.useEffect(() => {
-	        const controllerSubscription = controllerSubjectRef.current.subscribe({
+	        const controllerSubscription = subjectsRef.current.control.subscribe({
 	            next: (data) => (!data.name || name === data.name) &&
 	                setInputStateValue(get(data.values, name)),
 	        });
 	        return () => {
 	            controllerSubscription.unsubscribe();
-	            (shouldUnmountUnregister || shouldUnregister) && unregister(name);
+	            const shouldUnmountField = shouldUnmount || shouldUnregister;
+	            if (isFieldArray
+	                ? shouldUnmountField && !inFieldArrayActionRef.current
+	                : shouldUnmountField) {
+	                unregister(name);
+	            }
+	            else if (field && field._f) {
+	                field._f.mount = false;
+	            }
 	        };
 	    }, [name]);
 	    return {
@@ -5588,28 +5586,12 @@
 	            ref: (elm) => elm && ref(elm),
 	        },
 	        formState,
-	        fieldState: Object.defineProperties({}, {
-	            invalid: {
-	                get() {
-	                    return !!get(formState.errors, name);
-	                },
-	            },
-	            isDirty: {
-	                get() {
-	                    return !!get(formState.dirtyFields, name);
-	                },
-	            },
-	            isTouched: {
-	                get() {
-	                    return !!get(formState.touchedFields, name);
-	                },
-	            },
-	            error: {
-	                get() {
-	                    return get(formState.errors, name);
-	                },
-	            },
-	        }),
+	        fieldState: {
+	            invalid: !!get(formState.errors, name),
+	            isDirty: !!get(formState.dirtyFields, name),
+	            isTouched: !!get(formState.touchedFields, name),
+	            error: get(formState.errors, name),
+	        },
 	    };
 	}
 
@@ -5667,31 +5649,30 @@
 	    }
 	};
 
-	const getFieldsValues = (fieldsRef, defaultValuesRef, output = {}) => {
+	const getFieldsValues = (fieldsRef, output = {}) => {
 	    for (const name in fieldsRef.current) {
 	        const field = fieldsRef.current[name];
-	        if (field) {
+	        if (field && !isNullOrUndefined(output)) {
 	            const _f = field._f;
 	            const current = omit(field, '_f');
-	            set(output, name, _f
+	            set(output, name, _f && _f.ref
 	                ? _f.ref.disabled || (_f.refs && _f.refs.every((ref) => ref.disabled))
 	                    ? undefined
 	                    : _f.value
 	                : Array.isArray(field)
 	                    ? []
 	                    : {});
-	            if (current) {
+	            current &&
 	                getFieldsValues({
 	                    current,
-	                }, defaultValuesRef, output[name]);
-	            }
+	                }, output[name]);
 	        }
 	    }
-	    return Object.assign(Object.assign({}, defaultValuesRef), output);
+	    return output;
 	};
 
 	var generateId = () => {
-	    const d = typeof performance === UNDEFINED ? Date.now() : performance.now() * 1000;
+	    const d = typeof performance === 'undefined' ? Date.now() : performance.now() * 1000;
 	    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
 	        const r = (Math.random() * 16 + d) % 16 | 0;
 	        return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
@@ -5863,32 +5844,27 @@
 	const useFieldArray = ({ control, name, keyName = 'id', shouldUnregister, }) => {
 	    const methods = useFormContext();
 	    const focusNameRef = React__namespace.useRef('');
-	    const { isWatchAllRef, watchFieldsRef, getIsDirty, watchSubjectRef, fieldArraySubjectRef, fieldArrayNamesRef, fieldsRef, defaultValuesRef, formStateRef, formStateSubjectRef, readFormStateRef, validFieldsRef, fieldsWithValidationRef, fieldArrayDefaultValuesRef, unregister, shouldUnmountUnregister, } = control || methods.control;
-	    const [fields, setFields] = React__namespace.useState(mapIds(get(fieldArrayDefaultValuesRef.current, getNodeParentName(name))
-	        ? get(fieldArrayDefaultValuesRef.current, name, [])
-	        : get(defaultValuesRef.current, name, []), keyName));
+	    const isMountedRef = React__namespace.useRef(false);
+	    const { getIsDirty, namesRef, fieldsRef, defaultValuesRef, formStateRef, subjectsRef, readFormStateRef, updateIsValid, fieldArrayDefaultValuesRef, unregister, shouldUnmount, inFieldArrayActionRef, register, } = control || methods.control;
+	    const [fields, setFields] = React__namespace.useState(mapIds(get(fieldsRef.current, name) && isMountedRef.current
+	        ? get(getFieldsValues(fieldsRef), name)
+	        : get(fieldArrayDefaultValuesRef.current, getNodeParentName(name))
+	            ? get(fieldArrayDefaultValuesRef.current, name, [])
+	            : get(defaultValuesRef.current, name, []), keyName));
 	    set(fieldArrayDefaultValuesRef.current, name, [...fields]);
-	    fieldArrayNamesRef.current.add(name);
-	    const omitKey = (fields) => fields.map((field) => omit((field || {}), keyName));
+	    namesRef.current.array.add(name);
+	    const omitKey = (fields) => fields.map((field = {}) => omit(field, keyName));
 	    const getCurrentFieldsValues = () => {
-	        const values = get(getFieldsValues(fieldsRef, defaultValuesRef.current), name, []);
+	        const values = get(getFieldsValues(fieldsRef), name, []);
 	        return mapIds(get(fieldArrayDefaultValuesRef.current, name, []).map((item, index) => (Object.assign(Object.assign({}, item), values[index]))), keyName);
 	    };
-	    const getFocusDetail = (index, options) => options
-	        ? !isUndefined$1(options.focusIndex)
-	            ? `${name}.${options.focusIndex}`
-	            : options.focusName
-	                ? options.focusName
-	                : !options.shouldFocus
-	                    ? ''
-	                    : `${name}.${index}`
-	        : `${name}.${index}`;
-	    const resetFields = (index) => convertToArrayPayload(index).forEach((currentIndex) => set(fieldsRef.current, `${name}${isUndefined$1(currentIndex) ? '' : `.${currentIndex}`}`, isUndefined$1(currentIndex) ? [] : undefined));
+	    const getFocusFieldName = (index, options) => options && !options.shouldFocus
+	        ? options.focusName || `${name}.${options.focusIndex}.`
+	        : `${name}.${index}.`;
 	    const setFieldsAndNotify = (fieldsValues = []) => setFields(mapIds(fieldsValues, keyName));
 	    const cleanup = (ref) => !compact(get(ref, name, [])).length && unset(ref, name);
-	    const updateDirtyFieldsWithDefaultValues = (updatedFieldArrayValues) => updatedFieldArrayValues &&
-	        set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(omitKey(updatedFieldArrayValues), get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
 	    const batchStateUpdate = (method, args, updatedFieldArrayValues = [], shouldSet = true) => {
+	        inFieldArrayActionRef.current = true;
 	        if (get(fieldsRef.current, name)) {
 	            const output = method(get(fieldsRef.current, name), args.argA, args.argB);
 	            shouldSet && set(fieldsRef.current, name, output);
@@ -5907,16 +5883,11 @@
 	        if (readFormStateRef.current.dirtyFields ||
 	            readFormStateRef.current.isDirty) {
 	            set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(omitKey(updatedFieldArrayValues), get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
-	            updateDirtyFieldsWithDefaultValues(updatedFieldArrayValues);
+	            updatedFieldArrayValues &&
+	                set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(omitKey(updatedFieldArrayValues), get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
 	            cleanup(formStateRef.current.dirtyFields);
 	        }
-	        if (readFormStateRef.current.isValid) {
-	            set(validFieldsRef.current, name, method(get(validFieldsRef.current, name, []), args.argA));
-	            cleanup(validFieldsRef.current);
-	            set(fieldsWithValidationRef.current, name, method(get(fieldsWithValidationRef.current, name, []), args.argA));
-	            cleanup(fieldsWithValidationRef.current);
-	        }
-	        formStateSubjectRef.current.next({
+	        subjectsRef.current.state.next({
 	            isDirty: getIsDirty(name, omitKey(updatedFieldArrayValues)),
 	            errors: formStateRef.current.errors,
 	            isValid: formStateRef.current.isValid,
@@ -5927,15 +5898,7 @@
 	            const inputName = `${parentName || name}.${parentName ? valueIndex : index + valueIndex}.${key}`;
 	            Array.isArray(value)
 	                ? registerFieldArray(value, valueIndex, inputName)
-	                : set(fieldsRef.current, inputName, {
-	                    _f: {
-	                        ref: {
-	                            name: inputName,
-	                        },
-	                        name: inputName,
-	                        value,
-	                    },
-	                });
+	                : register(inputName, { value: isPrimitive(value) ? value : Object.assign({}, value) });
 	        }));
 	    const append$1 = (value, options) => {
 	        const appendValue = convertToArrayPayload(value);
@@ -5946,7 +5909,7 @@
 	            argA: fillEmptyArray(value),
 	        }, updatedFieldArrayValues, false);
 	        registerFieldArray(appendValue, currentIndex);
-	        focusNameRef.current = getFocusDetail(currentIndex, options);
+	        focusNameRef.current = getFocusFieldName(currentIndex, options);
 	    };
 	    const prepend$1 = (value, options) => {
 	        const prependValue = convertToArrayPayload(value);
@@ -5956,11 +5919,10 @@
 	            argA: fillEmptyArray(value),
 	        }, updatedFieldArrayValues);
 	        registerFieldArray(prependValue);
-	        focusNameRef.current = getFocusDetail(0, options);
+	        focusNameRef.current = getFocusFieldName(0, options);
 	    };
 	    const remove = (index) => {
 	        const updatedFieldArrayValues = removeArrayAt(getCurrentFieldsValues(), index);
-	        resetFields(index);
 	        setFieldsAndNotify(updatedFieldArrayValues);
 	        batchStateUpdate(removeArrayAt, {
 	            argA: index,
@@ -5975,7 +5937,7 @@
 	            argB: fillEmptyArray(value),
 	        }, updatedFieldArrayValues);
 	        registerFieldArray(insertValue, index);
-	        focusNameRef.current = getFocusDetail(index, options);
+	        focusNameRef.current = getFocusFieldName(index, options);
 	    };
 	    const swap = (indexA, indexB) => {
 	        const fieldValues = getCurrentFieldsValues();
@@ -5996,45 +5958,51 @@
 	        }, fieldValues, false);
 	    };
 	    React__namespace.useEffect(() => {
-	        if (isWatchAllRef.current) {
-	            formStateSubjectRef.current.next({});
+	        inFieldArrayActionRef.current = false;
+	        if (namesRef.current.watchAll) {
+	            subjectsRef.current.state.next({});
 	        }
 	        else {
-	            for (const watchField of watchFieldsRef.current) {
+	            for (const watchField of namesRef.current.watch) {
 	                if (name.startsWith(watchField)) {
-	                    formStateSubjectRef.current.next({});
+	                    subjectsRef.current.state.next({});
 	                    break;
 	                }
 	            }
 	        }
-	        watchSubjectRef.current.next({
+	        subjectsRef.current.watch.next({
 	            name,
-	            value: get(getFieldsValues(fieldsRef, defaultValuesRef.current), name, []),
+	            values: getFieldsValues(fieldsRef),
 	        });
 	        focusNameRef.current &&
 	            focusFieldBy(fieldsRef.current, (key) => key.startsWith(focusNameRef.current));
 	        focusNameRef.current = '';
-	        fieldArraySubjectRef.current.next({
+	        subjectsRef.current.array.next({
 	            name,
-	            fields: omitKey([...fields]),
+	            values: omitKey([...fields]),
 	        });
+	        readFormStateRef.current.isValid && updateIsValid();
 	    }, [fields, name]);
 	    React__namespace.useEffect(() => {
-	        const fieldArraySubscription = fieldArraySubjectRef.current.subscribe({
-	            next({ name: inputFieldArrayName, fields, isReset }) {
+	        const fieldArraySubscription = subjectsRef.current.array.subscribe({
+	            next({ name: inputFieldArrayName, values, isReset }) {
 	                if (isReset) {
 	                    unset(fieldsRef.current, inputFieldArrayName || name);
 	                    inputFieldArrayName
-	                        ? set(fieldArrayDefaultValuesRef.current, inputFieldArrayName, fields)
-	                        : (fieldArrayDefaultValuesRef.current = fields);
+	                        ? set(fieldArrayDefaultValuesRef.current, inputFieldArrayName, values)
+	                        : (fieldArrayDefaultValuesRef.current = values);
 	                    setFieldsAndNotify(get(fieldArrayDefaultValuesRef.current, name));
 	                }
 	            },
 	        });
 	        !get(fieldsRef.current, name) && set(fieldsRef.current, name, []);
+	        isMountedRef.current = true;
 	        return () => {
 	            fieldArraySubscription.unsubscribe();
-	            (shouldUnmountUnregister || shouldUnregister) && unregister(name);
+	            if (shouldUnmount || shouldUnregister) {
+	                unregister(name);
+	                unset(fieldArrayDefaultValuesRef.current, name);
+	            }
 	        };
 	    }, []);
 	    return {
@@ -6048,22 +6016,9 @@
 	    };
 	};
 
-	function getFields(fieldsNames, fieldsRefs) {
-	    const currentFields = {};
-	    for (const name of fieldsNames) {
-	        const field = get(fieldsRefs, name);
-	        if (field) {
-	            !isKey(name)
-	                ? set(currentFields, name, field._f)
-	                : (currentFields[name] = field._f);
-	        }
-	    }
-	    return currentFields;
-	}
-
 	var isFileInput = (element) => element.type === 'file';
 
-	var isMultipleSelect = (element) => element.type === `${SELECT}-multiple`;
+	var isMultipleSelect = (element) => element.type === `select-multiple`;
 
 	var isRadioInput = (element) => element.type === 'radio';
 
@@ -6092,15 +6047,17 @@
 	    return defaultResult;
 	};
 
-	var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => valueAsNumber
-	    ? value === ''
-	        ? NaN
-	        : +value
-	    : valueAsDate
-	        ? new Date(value)
-	        : setValueAs
-	            ? setValueAs(value)
-	            : value;
+	var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isUndefined$1(value)
+	    ? value
+	    : valueAsNumber
+	        ? value === ''
+	            ? NaN
+	            : +value
+	        : valueAsDate
+	            ? new Date(value)
+	            : setValueAs
+	                ? setValueAs(value)
+	                : value;
 
 	var getMultipleSelectValue = (options) => [...options]
 	    .filter(({ selected }) => selected)
@@ -6141,7 +6098,21 @@
 	    }
 	}
 
-	var hasValidation = (options) => options &&
+	var getResolverOptions = (fieldsNames, fieldsRefs, criteriaMode) => {
+	    const fields = {};
+	    for (const name of fieldsNames) {
+	        const field = get(fieldsRefs, name);
+	        field && set(fields, name, field._f);
+	    }
+	    return {
+	        criteriaMode,
+	        names: [...fieldsNames],
+	        fields,
+	    };
+	};
+
+	var hasValidation = (options, mounted) => mounted &&
+	    options &&
 	    (options.required ||
 	        options.min ||
 	        options.max ||
@@ -6175,7 +6146,9 @@
 	var isRegex = (value) => value instanceof RegExp;
 
 	function getValidateError(result, ref, type = 'validate') {
-	    if (isMessage(result) || (isBoolean(result) && !result)) {
+	    if (isMessage(result) ||
+	        (Array.isArray(result) && result.every(isMessage)) ||
+	        (isBoolean(result) && !result)) {
 	        return {
 	            type,
 	            message: isMessage(result) ? result : '',
@@ -6191,7 +6164,10 @@
 	        message: '',
 	    };
 
-	var validateField = async ({ _f: { ref, refs, required, maxLength, minLength, min, max, pattern, validate, name, value: inputValue, valueAsNumber, }, }, validateAllFieldCriteria) => {
+	var validateField = async ({ _f: { ref, refs, required, maxLength, minLength, min, max, pattern, validate, name, value: inputValue, valueAsNumber, mount, }, }, validateAllFieldCriteria) => {
+	    if (!mount) {
+	        return {};
+	    }
 	    const error = {};
 	    const isRadio = isRadioInput(ref);
 	    const isCheckBox = isCheckBoxInput(ref);
@@ -6371,27 +6347,8 @@
 	    }
 	}
 
-	const isWindowUndefined = typeof window === UNDEFINED;
+	const isWindowUndefined = typeof window === 'undefined';
 	function useForm({ mode = VALIDATION_MODE.onSubmit, reValidateMode = VALIDATION_MODE.onChange, resolver, context, defaultValues = {}, shouldFocusError = true, shouldUnregister, criteriaMode, } = {}) {
-	    const fieldsRef = React__namespace.useRef({});
-	    const fieldsNamesRef = React__namespace.useRef(new Set());
-	    const formStateSubjectRef = React__namespace.useRef(new Subject());
-	    const unregisterFieldsNamesRef = React__namespace.useRef(new Set());
-	    const watchSubjectRef = React__namespace.useRef(new Subject());
-	    const controllerSubjectRef = React__namespace.useRef(new Subject());
-	    const fieldArraySubjectRef = React__namespace.useRef(new Subject());
-	    const fieldArrayDefaultValuesRef = React__namespace.useRef({});
-	    const watchFieldsRef = React__namespace.useRef(new Set());
-	    const isMountedRef = React__namespace.useRef(false);
-	    const fieldsWithValidationRef = React__namespace.useRef({});
-	    const validFieldsRef = React__namespace.useRef({});
-	    const defaultValuesRef = React__namespace.useRef(defaultValues);
-	    const isWatchAllRef = React__namespace.useRef(false);
-	    const contextRef = React__namespace.useRef(context);
-	    const resolverRef = React__namespace.useRef(resolver);
-	    const fieldArrayNamesRef = React__namespace.useRef(new Set());
-	    const validationMode = getValidationModes(mode);
-	    const isValidateAllFieldCriteria = criteriaMode === VALIDATION_MODE.all;
 	    const [formState, updateFormState] = React__namespace.useState({
 	        isDirty: false,
 	        isValidating: false,
@@ -6401,7 +6358,7 @@
 	        touchedFields: {},
 	        isSubmitting: false,
 	        isSubmitSuccessful: false,
-	        isValid: !validationMode.isOnSubmit,
+	        isValid: false,
 	        errors: {},
 	    });
 	    const readFormStateRef = React__namespace.useRef({
@@ -6412,83 +6369,107 @@
 	        isValid: !isProxyEnabled,
 	        errors: !isProxyEnabled,
 	    });
+	    const resolverRef = React__namespace.useRef(resolver);
 	    const formStateRef = React__namespace.useRef(formState);
-	    contextRef.current = context;
+	    const fieldsRef = React__namespace.useRef({});
+	    const defaultValuesRef = React__namespace.useRef(defaultValues);
+	    const fieldArrayDefaultValuesRef = React__namespace.useRef({});
+	    const contextRef = React__namespace.useRef(context);
+	    const inFieldArrayActionRef = React__namespace.useRef(false);
+	    const isMountedRef = React__namespace.useRef(false);
+	    const subjectsRef = React__namespace.useRef({
+	        watch: new Subject(),
+	        control: new Subject(),
+	        array: new Subject(),
+	        state: new Subject(),
+	    });
+	    const namesRef = React__namespace.useRef({
+	        mount: new Set(),
+	        unMount: new Set(),
+	        array: new Set(),
+	        watch: new Set(),
+	        watchAll: false,
+	    });
+	    const validationMode = getValidationModes(mode);
+	    const isValidateAllFieldCriteria = criteriaMode === VALIDATION_MODE.all;
 	    resolverRef.current = resolver;
-	    const getIsValid = () => (formStateRef.current.isValid =
-	        deepEqual(validFieldsRef.current, fieldsWithValidationRef.current) &&
-	            isEmptyObject(formStateRef.current.errors));
-	    const shouldRenderBaseOnError = React__namespace.useCallback((name, error, shouldRender = false, state = {}, isValid, isWatched) => {
+	    contextRef.current = context;
+	    const isFieldWatched = (name) => namesRef.current.watchAll ||
+	        namesRef.current.watch.has(name) ||
+	        namesRef.current.watch.has((name.match(/\w+/) || [])[0]);
+	    const shouldRenderBaseOnError = React__namespace.useCallback(async (shouldSkipRender, name, error, inputState, isValidFromResolver, isWatched) => {
 	        const previousError = get(formStateRef.current.errors, name);
-	        let shouldReRender = shouldRender ||
-	            !deepEqual(previousError, error, true) ||
-	            (readFormStateRef.current.isValid &&
-	                isUndefined$1(error) &&
-	                get(fieldsWithValidationRef.current, name) &&
-	                !get(validFieldsRef.current, name));
-	        if (error) {
-	            unset(validFieldsRef.current, name);
-	            shouldReRender =
-	                shouldReRender ||
-	                    !previousError ||
-	                    !deepEqual(previousError, error, true);
-	            set(formStateRef.current.errors, name, error);
-	        }
-	        else {
-	            if (get(fieldsWithValidationRef.current, name) || resolverRef.current) {
-	                set(validFieldsRef.current, name, true);
-	                shouldReRender = shouldReRender || previousError;
-	            }
-	            unset(formStateRef.current.errors, name);
-	        }
-	        if ((shouldReRender && !isNullOrUndefined(shouldRender)) ||
-	            !isEmptyObject(state) ||
-	            isWatched) {
-	            const updatedFormState = Object.assign(Object.assign({}, state), { isValid: resolverRef.current ? !!isValid : getIsValid(), errors: formStateRef.current.errors });
+	        const isValid = readFormStateRef.current.isValid
+	            ? resolver
+	                ? isValidFromResolver
+	                : await validateForm(fieldsRef.current, true)
+	            : false;
+	        error
+	            ? set(formStateRef.current.errors, name, error)
+	            : unset(formStateRef.current.errors, name);
+	        if ((isWatched ||
+	            (error ? !deepEqual(previousError, error, true) : previousError) ||
+	            !isEmptyObject(inputState) ||
+	            formStateRef.current.isValid !== isValid) &&
+	            !shouldSkipRender) {
+	            const updatedFormState = Object.assign(Object.assign({}, inputState), { isValid: !!isValid, errors: formStateRef.current.errors, name });
 	            formStateRef.current = Object.assign(Object.assign({}, formStateRef.current), updatedFormState);
-	            formStateSubjectRef.current.next(isWatched ? { name } : updatedFormState);
+	            subjectsRef.current.state.next(isWatched ? { name } : updatedFormState);
 	        }
-	        formStateSubjectRef.current.next({
+	        subjectsRef.current.state.next({
 	            isValidating: false,
 	        });
 	    }, []);
 	    const setFieldValue = React__namespace.useCallback((name, rawValue, options = {}, shouldRender, shouldRegister) => {
 	        shouldRegister && register(name);
-	        const _f = get(fieldsRef.current, name, {})._f;
-	        if (_f) {
-	            const value = isWeb && isHTMLElement(_f.ref) && isNullOrUndefined(rawValue)
-	                ? ''
-	                : rawValue;
-	            _f.value = getFieldValueAs(rawValue, _f);
-	            if (isRadioInput(_f.ref)) {
-	                (_f.refs || []).forEach((radioRef) => (radioRef.checked = radioRef.value === value));
-	            }
-	            else if (isFileInput(_f.ref) && !isString$1(value)) {
-	                _f.ref.files = value;
-	            }
-	            else if (isMultipleSelect(_f.ref)) {
-	                [..._f.ref.options].forEach((selectRef) => (selectRef.selected = value.includes(selectRef.value)));
-	            }
-	            else if (isCheckBoxInput(_f.ref) && _f.refs) {
-	                _f.refs.length > 1
-	                    ? _f.refs.forEach((checkboxRef) => (checkboxRef.checked = Array.isArray(value)
-	                        ? !!value.find((data) => data === checkboxRef.value)
-	                        : value === checkboxRef.value))
-	                    : (_f.refs[0].checked = !!value);
+	        const field = get(fieldsRef.current, name);
+	        if (field) {
+	            const _f = field._f;
+	            if (_f) {
+	                const value = isWeb && isHTMLElement(_f.ref) && isNullOrUndefined(rawValue)
+	                    ? ''
+	                    : rawValue;
+	                _f.value = getFieldValueAs(rawValue, _f);
+	                if (isRadioInput(_f.ref)) {
+	                    (_f.refs || []).forEach((radioRef) => (radioRef.checked = radioRef.value === value));
+	                }
+	                else if (isFileInput(_f.ref) && !isString$1(value)) {
+	                    _f.ref.files = value;
+	                }
+	                else if (isMultipleSelect(_f.ref)) {
+	                    [..._f.ref.options].forEach((selectRef) => (selectRef.selected = value.includes(selectRef.value)));
+	                }
+	                else if (isCheckBoxInput(_f.ref) && _f.refs) {
+	                    _f.refs.length > 1
+	                        ? _f.refs.forEach((checkboxRef) => (checkboxRef.checked = Array.isArray(value)
+	                            ? !!value.find((data) => data === checkboxRef.value)
+	                            : value === checkboxRef.value))
+	                        : (_f.refs[0].checked = !!value);
+	                }
+	                else {
+	                    _f.ref.value = value;
+	                }
+	                if (shouldRender) {
+	                    const values = getFieldsValues(fieldsRef);
+	                    set(values, name, rawValue);
+	                    subjectsRef.current.control.next({
+	                        values: Object.assign(Object.assign({}, defaultValuesRef.current), values),
+	                        name,
+	                    });
+	                }
+	                (options.shouldDirty || options.shouldTouch) &&
+	                    updateTouchAndDirtyState(name, value, options.shouldTouch);
+	                options.shouldValidate && trigger(name);
 	            }
 	            else {
-	                _f.ref.value = value;
+	                field._f = {
+	                    ref: {
+	                        name,
+	                        value: rawValue,
+	                    },
+	                    value: rawValue,
+	                };
 	            }
-	            if (shouldRender) {
-	                const values = getFieldsValues(fieldsRef);
-	                set(values, name, rawValue);
-	                controllerSubjectRef.current.next({
-	                    values: Object.assign(Object.assign({}, defaultValuesRef.current), values),
-	                    name,
-	                });
-	            }
-	            options.shouldDirty && updateAndGetDirtyState(name, value);
-	            options.shouldValidate && trigger(name);
 	        }
 	    }, []);
 	    const getIsDirty = React__namespace.useCallback((name, data) => {
@@ -6496,50 +6477,63 @@
 	        name && data && set(formValues, name, data);
 	        return !deepEqual(formValues, defaultValuesRef.current);
 	    }, []);
-	    const updateAndGetDirtyState = React__namespace.useCallback((name, inputValue, shouldRender = true) => {
-	        if (readFormStateRef.current.isDirty ||
-	            readFormStateRef.current.dirtyFields) {
-	            const isFieldDirty = !deepEqual(get(defaultValuesRef.current, name), inputValue);
-	            const isDirtyFieldExist = get(formStateRef.current.dirtyFields, name);
+	    const updateTouchAndDirtyState = React__namespace.useCallback((name, inputValue, isCurrentTouched, shouldRender = true) => {
+	        const state = {
+	            name,
+	        };
+	        let isChanged = false;
+	        if (readFormStateRef.current.isDirty) {
 	            const previousIsDirty = formStateRef.current.isDirty;
-	            isFieldDirty
+	            formStateRef.current.isDirty = getIsDirty();
+	            state.isDirty = formStateRef.current.isDirty;
+	            isChanged = previousIsDirty !== state.isDirty;
+	        }
+	        if (readFormStateRef.current.dirtyFields) {
+	            const isPreviousFieldDirty = get(formStateRef.current.dirtyFields, name);
+	            const isCurrentFieldDirty = !deepEqual(get(defaultValuesRef.current, name), inputValue);
+	            isCurrentFieldDirty
 	                ? set(formStateRef.current.dirtyFields, name, true)
 	                : unset(formStateRef.current.dirtyFields, name);
-	            formStateRef.current.isDirty = getIsDirty();
-	            const state = {
-	                isDirty: formStateRef.current.isDirty,
-	                dirtyFields: formStateRef.current.dirtyFields,
-	                name,
-	            };
-	            const isChanged = (readFormStateRef.current.isDirty &&
-	                previousIsDirty !== state.isDirty) ||
-	                (readFormStateRef.current.dirtyFields &&
-	                    isDirtyFieldExist !== get(formStateRef.current.dirtyFields, name));
-	            isChanged && shouldRender && formStateSubjectRef.current.next(state);
-	            return isChanged ? state : {};
+	            state.dirtyFields = formStateRef.current.dirtyFields;
+	            isChanged =
+	                isChanged ||
+	                    isPreviousFieldDirty !== get(formStateRef.current.dirtyFields, name);
 	        }
-	        return {};
+	        const isPreviousFieldTouched = get(formStateRef.current.touchedFields, name);
+	        if (isCurrentTouched && !isPreviousFieldTouched) {
+	            set(formStateRef.current.touchedFields, name, isCurrentTouched);
+	            state.touchedFields = formStateRef.current.touchedFields;
+	            isChanged =
+	                isChanged ||
+	                    (readFormStateRef.current.touchedFields &&
+	                        isPreviousFieldTouched !== isCurrentTouched);
+	        }
+	        isChanged && shouldRender && subjectsRef.current.state.next(state);
+	        return isChanged ? state : {};
 	    }, []);
-	    const executeValidation = React__namespace.useCallback(async (name, skipReRender) => {
+	    const executeInlineValidation = React__namespace.useCallback(async (name, skipReRender) => {
 	        const error = (await validateField(get(fieldsRef.current, name), isValidateAllFieldCriteria))[name];
-	        shouldRenderBaseOnError(name, error, skipReRender);
+	        shouldRenderBaseOnError(skipReRender, name, error);
 	        return isUndefined$1(error);
 	    }, [isValidateAllFieldCriteria]);
-	    const executeSchemaOrResolverValidation = React__namespace.useCallback(async (names, currentNames = []) => {
-	        const { errors } = await resolverRef.current(getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current), contextRef.current, {
-	            criteriaMode,
-	            names: currentNames,
-	            fields: getFields(fieldsNamesRef.current, fieldsRef.current),
-	        });
-	        for (const name of names) {
-	            const error = get(errors, name);
-	            error
-	                ? set(formStateRef.current.errors, name, error)
-	                : unset(formStateRef.current.errors, name);
+	    const executeResolverValidation = React__namespace.useCallback(async (names) => {
+	        const { errors } = await resolverRef.current(getFieldsValues(fieldsRef), contextRef.current, getResolverOptions(namesRef.current.mount, fieldsRef.current, criteriaMode));
+	        if (names) {
+	            for (const name of names) {
+	                const error = get(errors, name);
+	                error
+	                    ? set(formStateRef.current.errors, name, error)
+	                    : unset(formStateRef.current.errors, name);
+	            }
+	        }
+	        else {
+	            formStateRef.current.errors = errors;
 	        }
 	        return errors;
 	    }, [criteriaMode]);
-	    const validateForm = async (fieldsRef) => {
+	    const validateForm = async (fieldsRef, shouldCheckValid, context = {
+	        valid: true,
+	    }) => {
 	        for (const name in fieldsRef) {
 	            const field = fieldsRef[name];
 	            if (field) {
@@ -6547,89 +6541,96 @@
 	                const current = omit(field, '_f');
 	                if (_f) {
 	                    const fieldError = await validateField(field, isValidateAllFieldCriteria);
-	                    if (fieldError[_f.name]) {
-	                        set(formStateRef.current.errors, _f.name, fieldError[_f.name]);
-	                        unset(validFieldsRef.current, _f.name);
+	                    if (shouldCheckValid) {
+	                        if (fieldError[_f.name]) {
+	                            context.valid = false;
+	                            break;
+	                        }
 	                    }
-	                    else if (get(fieldsWithValidationRef.current, _f.name)) {
-	                        set(validFieldsRef.current, _f.name, true);
-	                        unset(formStateRef.current.errors, _f.name);
+	                    else {
+	                        fieldError[_f.name]
+	                            ? set(formStateRef.current.errors, _f.name, fieldError[_f.name])
+	                            : unset(formStateRef.current.errors, _f.name);
 	                    }
 	                }
-	                current && (await validateForm(current));
+	                current && (await validateForm(current, shouldCheckValid, context));
 	            }
 	        }
+	        return context.valid;
 	    };
-	    const trigger = React__namespace.useCallback(async (name) => {
-	        const fields = isUndefined$1(name)
-	            ? Object.keys(fieldsRef.current)
-	            : convertToArrayPayload(name);
+	    const trigger = React__namespace.useCallback(async (name, options = {}) => {
+	        const fieldNames = convertToArrayPayload(name);
 	        let isValid;
-	        formStateSubjectRef.current.next({
+	        subjectsRef.current.state.next({
 	            isValidating: true,
 	        });
-	        if (resolverRef.current) {
-	            isValid = isEmptyObject(await executeSchemaOrResolverValidation(fields, isUndefined$1(name)
-	                ? undefined
-	                : fields));
+	        if (resolver) {
+	            const schemaResult = await executeResolverValidation(isUndefined$1(name) ? name : fieldNames);
+	            isValid = name
+	                ? fieldNames.every((name) => !get(schemaResult, name))
+	                : isEmptyObject(schemaResult);
 	        }
 	        else {
-	            isValid = !!(isUndefined$1(name)
-	                ? await validateForm(fieldsRef.current)
-	                : (await Promise.all(fields
+	            isValid = name
+	                ? (await Promise.all(fieldNames
 	                    .filter((fieldName) => get(fieldsRef.current, fieldName))
-	                    .map(async (fieldName) => await executeValidation(fieldName, null)))).every(Boolean));
+	                    .map(async (fieldName) => await executeInlineValidation(fieldName, true)))).every(Boolean)
+	                : await validateForm(fieldsRef.current);
 	        }
-	        formStateSubjectRef.current.next(Object.assign(Object.assign({}, (isString$1(name) ? { name } : {})), { errors: formStateRef.current.errors, isValidating: false, isValid: resolverRef.current ? isValid : getIsValid() }));
+	        subjectsRef.current.state.next(Object.assign(Object.assign({}, (isString$1(name) ? { name } : {})), { errors: formStateRef.current.errors, isValidating: false }));
+	        if (options.shouldFocus && !isValid) {
+	            focusFieldBy(fieldsRef.current, (key) => get(formStateRef.current.errors, key), fieldNames);
+	        }
+	        readFormStateRef.current.isValid && updateIsValid();
 	        return isValid;
-	    }, [executeSchemaOrResolverValidation, executeValidation]);
+	    }, [executeResolverValidation, executeInlineValidation]);
+	    const updateIsValidAndInputValue = (name, ref) => {
+	        const field = get(fieldsRef.current, name);
+	        if (field) {
+	            const isValueUndefined = isUndefined$1(field._f.value);
+	            const defaultValue = isValueUndefined
+	                ? get(defaultValuesRef.current, name)
+	                : field._f.value;
+	            if (!isUndefined$1(defaultValue)) {
+	                if (ref && ref.defaultChecked) {
+	                    field._f.value = getFieldValue(field);
+	                }
+	                else if (isNameInFieldArray(namesRef.current.array, name)) {
+	                    field._f.value = defaultValue;
+	                }
+	                else {
+	                    setFieldValue(name, defaultValue);
+	                }
+	            }
+	            else if (isValueUndefined) {
+	                field._f.value = getFieldValue(field);
+	            }
+	        }
+	        isMountedRef.current && readFormStateRef.current.isValid && updateIsValid();
+	    };
+	    const updateIsValid = React__namespace.useCallback(async (values = {}) => {
+	        const isValid = resolver
+	            ? isEmptyObject((await resolverRef.current(Object.assign(Object.assign({}, getFieldsValues(fieldsRef)), values), contextRef.current, getResolverOptions(namesRef.current.mount, fieldsRef.current, criteriaMode))).errors)
+	            : await validateForm(fieldsRef.current, true);
+	        isValid !== formStateRef.current.isValid &&
+	            subjectsRef.current.state.next({
+	                isValid,
+	            });
+	    }, [criteriaMode]);
 	    const setInternalValues = React__namespace.useCallback((name, value, options) => Object.entries(value).forEach(([inputKey, inputValue]) => {
 	        const fieldName = `${name}.${inputKey}`;
 	        const field = get(fieldsRef.current, fieldName);
-	        field && !field._f
+	        const isFieldArray = namesRef.current.array.has(name);
+	        isFieldArray || !isPrimitive(inputValue) || (field && !field._f)
 	            ? setInternalValues(fieldName, inputValue, options)
 	            : setFieldValue(fieldName, inputValue, options, true, !field);
 	    }), [trigger]);
-	    const isFieldWatched = (name) => isWatchAllRef.current ||
-	        watchFieldsRef.current.has(name) ||
-	        watchFieldsRef.current.has((name.match(/\w+/) || [])[0]);
-	    const updateValidAndValue = (name, options, ref, isWithinRefCallback) => {
-	        const field = get(fieldsRef.current, name);
-	        const defaultValue = isUndefined$1(field._f.value)
-	            ? get(defaultValuesRef.current, name)
-	            : field._f.value;
-	        if (field && !isUndefined$1(defaultValue)) {
-	            if (ref && ref.defaultChecked) {
-	                field._f.value = getFieldValue(field);
-	            }
-	            else if (!isNameInFieldArray(fieldArrayNamesRef.current, name)) {
-	                setFieldValue(name, defaultValue);
-	            }
-	            else {
-	                field._f.value = defaultValue;
-	            }
-	        }
-	        if ((!isUndefined$1(defaultValue) || isWithinRefCallback) &&
-	            hasValidation(options) &&
-	            !validationMode.isOnSubmit &&
-	            field &&
-	            readFormStateRef.current.isValid) {
-	            validateField(field, isValidateAllFieldCriteria).then((error) => {
-	                isEmptyObject(error)
-	                    ? set(validFieldsRef.current, name, true)
-	                    : unset(validFieldsRef.current, name);
-	                formStateRef.current.isValid !== getIsValid() &&
-	                    updateFormState(Object.assign(Object.assign({}, formStateRef.current), { isValid: getIsValid() }));
-	            });
-	        }
-	        return defaultValue;
-	    };
 	    const setValue = (name, value, options = {}) => {
 	        const field = get(fieldsRef.current, name);
-	        const isFieldArray = fieldArrayNamesRef.current.has(name);
+	        const isFieldArray = namesRef.current.array.has(name);
 	        if (isFieldArray) {
-	            fieldArraySubjectRef.current.next({
-	                fields: value,
+	            subjectsRef.current.array.next({
+	                values: value,
 	                name,
 	                isReset: true,
 	            });
@@ -6637,7 +6638,7 @@
 	                readFormStateRef.current.dirtyFields) &&
 	                options.shouldDirty) {
 	                set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(value, get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
-	                formStateSubjectRef.current.next({
+	                subjectsRef.current.state.next({
 	                    name,
 	                    dirtyFields: formStateRef.current.dirtyFields,
 	                    isDirty: getIsDirty(name, value),
@@ -6647,11 +6648,11 @@
 	                set(fieldsRef.current, name, []) &&
 	                set(fieldArrayDefaultValuesRef.current, name, []);
 	        }
-	        (field && !field._f) || isFieldArray
+	        ((field && !field._f) || isFieldArray) && !isNullOrUndefined(value)
 	            ? setInternalValues(name, value, isFieldArray ? {} : options)
 	            : setFieldValue(name, value, options, true, !field);
-	        isFieldWatched(name) && formStateSubjectRef.current.next({});
-	        watchSubjectRef.current.next({ name, value });
+	        isFieldWatched(name) && subjectsRef.current.state.next({});
+	        subjectsRef.current.watch.next({ name, values: getValues() });
 	    };
 	    const handleChange = React__namespace.useCallback(async ({ type, target, target: { value, type: inputType } }) => {
 	        let name = target.name;
@@ -6663,8 +6664,8 @@
 	            inputValue = isUndefined$1(inputValue) ? value : inputValue;
 	            const isBlurEvent = type === EVENTS.BLUR;
 	            const { isOnBlur: isReValidateOnBlur, isOnChange: isReValidateOnChange, } = getValidationModes(reValidateMode);
-	            const shouldSkipValidation = (!hasValidation(field._f) &&
-	                !resolverRef.current &&
+	            const shouldSkipValidation = (!hasValidation(field._f, field._f.mount) &&
+	                !resolver &&
 	                !get(formStateRef.current.errors, name)) ||
 	                skipValidation(Object.assign({ isBlurEvent, isTouched: !!get(formStateRef.current.touchedFields, name), isSubmitted: formStateRef.current.isSubmitted, isReValidateOnBlur,
 	                    isReValidateOnChange }, validationMode));
@@ -6672,33 +6673,23 @@
 	            if (!isUndefined$1(inputValue)) {
 	                field._f.value = inputValue;
 	            }
-	            const state = updateAndGetDirtyState(name, field._f.value, false);
-	            if (isBlurEvent && !get(formStateRef.current.touchedFields, name)) {
-	                set(formStateRef.current.touchedFields, name, true);
-	                readFormStateRef.current.touchedFields &&
-	                    (state.touchedFields = formStateRef.current.touchedFields);
-	            }
-	            let shouldRender = !isEmptyObject(state) || isWatched;
+	            const inputState = updateTouchAndDirtyState(name, field._f.value, isBlurEvent, false);
+	            const shouldRender = !isEmptyObject(inputState) || isWatched;
 	            if (shouldSkipValidation) {
 	                !isBlurEvent &&
-	                    watchSubjectRef.current.next({
+	                    subjectsRef.current.watch.next({
 	                        name,
 	                        type,
-	                        value: inputValue,
+	                        values: getValues(),
 	                    });
 	                return (shouldRender &&
-	                    formStateSubjectRef.current.next(isWatched ? { name } : Object.assign(Object.assign({}, state), { name })));
+	                    subjectsRef.current.state.next(isWatched ? { name } : Object.assign(Object.assign({}, inputState), { name })));
 	            }
-	            formStateSubjectRef.current.next({
+	            subjectsRef.current.state.next({
 	                isValidating: true,
 	            });
-	            if (resolverRef.current) {
-	                const { errors } = await resolverRef.current(getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current), contextRef.current, {
-	                    criteriaMode,
-	                    fields: getFields([name], fieldsRef.current),
-	                    names: [name],
-	                });
-	                const previousFormIsValid = formStateRef.current.isValid;
+	            if (resolver) {
+	                const { errors } = await resolverRef.current(getFieldsValues(fieldsRef), contextRef.current, getResolverOptions([name], fieldsRef.current, criteriaMode));
 	                error = get(errors, name);
 	                if (isCheckBoxInput(target) && !error) {
 	                    const parentNodeName = getNodeParentName(name);
@@ -6710,115 +6701,90 @@
 	                    }
 	                }
 	                isValid = isEmptyObject(errors);
-	                previousFormIsValid !== isValid && (shouldRender = true);
 	            }
 	            else {
 	                error = (await validateField(field, isValidateAllFieldCriteria))[name];
 	            }
 	            !isBlurEvent &&
-	                watchSubjectRef.current.next({
+	                subjectsRef.current.watch.next({
 	                    name,
 	                    type,
-	                    value: inputValue,
+	                    values: getValues(),
 	                });
-	            shouldRenderBaseOnError(name, error, shouldRender, state, isValid, isWatched);
+	            shouldRenderBaseOnError(false, name, error, inputState, isValid, isWatched);
 	        }
 	    }, []);
 	    const getValues = (fieldNames) => {
-	        const values = isMountedRef.current
-	            ? getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current)
-	            : defaultValuesRef.current;
+	        const values = Object.assign(Object.assign({}, defaultValuesRef.current), getFieldsValues(fieldsRef));
 	        return isUndefined$1(fieldNames)
 	            ? values
 	            : isString$1(fieldNames)
 	                ? get(values, fieldNames)
 	                : fieldNames.map((name) => get(values, name));
 	    };
-	    const updateIsValid = React__namespace.useCallback(async (values = {}) => {
-	        const previousIsValid = formStateRef.current.isValid;
-	        if (resolver) {
-	            const { errors } = await resolverRef.current(Object.assign(Object.assign({}, getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current)), values), contextRef.current, {
-	                criteriaMode,
-	                fields: getFields(fieldsNamesRef.current, fieldsRef.current),
-	            });
-	            formStateRef.current.isValid = isEmptyObject(errors);
-	        }
-	        else {
-	            getIsValid();
-	        }
-	        previousIsValid !== formStateRef.current.isValid &&
-	            formStateSubjectRef.current.next({
-	                isValid: formStateRef.current.isValid,
-	            });
-	    }, [criteriaMode]);
 	    const clearErrors = (name) => {
-	        name &&
-	            convertToArrayPayload(name).forEach((inputName) => unset(formStateRef.current.errors, inputName));
-	        formStateSubjectRef.current.next({
-	            errors: name ? formStateRef.current.errors : {},
+	        name
+	            ? convertToArrayPayload(name).forEach((inputName) => unset(formStateRef.current.errors, inputName))
+	            : (formStateRef.current.errors = {});
+	        subjectsRef.current.state.next({
+	            errors: formStateRef.current.errors,
 	        });
 	    };
 	    const setError = (name, error, options) => {
 	        const ref = ((get(fieldsRef.current, name) || { _f: {} })._f || {}).ref;
 	        set(formStateRef.current.errors, name, Object.assign(Object.assign({}, error), { ref }));
-	        formStateSubjectRef.current.next({
+	        subjectsRef.current.state.next({
 	            name,
 	            errors: formStateRef.current.errors,
 	            isValid: false,
 	        });
 	        options && options.shouldFocus && ref && ref.focus && ref.focus();
 	    };
-	    const watchInternal = React__namespace.useCallback((fieldNames, defaultValue, isGlobal) => {
+	    const watchInternal = React__namespace.useCallback((fieldNames, defaultValue, isGlobal, formValues) => {
 	        const isArrayNames = Array.isArray(fieldNames);
-	        const fieldValues = isMountedRef.current
-	            ? getFieldsValues(fieldsRef, defaultValuesRef.current)
-	            : isUndefined$1(defaultValue)
-	                ? defaultValuesRef.current
-	                : isArrayNames
-	                    ? defaultValue || {}
-	                    : { [fieldNames]: defaultValue };
+	        const fieldValues = formValues || isMountedRef.current
+	            ? Object.assign(Object.assign({}, defaultValuesRef.current), (formValues || getFieldsValues(fieldsRef))) : isUndefined$1(defaultValue)
+	            ? defaultValuesRef.current
+	            : isArrayNames
+	                ? defaultValue
+	                : { [fieldNames]: defaultValue };
 	        if (isUndefined$1(fieldNames)) {
-	            isGlobal && (isWatchAllRef.current = true);
+	            isGlobal && (namesRef.current.watchAll = true);
 	            return fieldValues;
 	        }
 	        const result = [];
-	        for (const fieldName of isArrayNames ? fieldNames : [fieldNames]) {
-	            isGlobal && watchFieldsRef.current.add(fieldName);
+	        for (const fieldName of convertToArrayPayload(fieldNames)) {
+	            isGlobal && namesRef.current.watch.add(fieldName);
 	            result.push(get(fieldValues, fieldName));
 	        }
 	        return isArrayNames ? result : result[0];
 	    }, []);
 	    const watch = (fieldName, defaultValue) => isFunction(fieldName)
-	        ? watchSubjectRef.current.subscribe({
+	        ? subjectsRef.current.watch.subscribe({
 	            next: (info) => fieldName(watchInternal(undefined, defaultValue), info),
 	        })
 	        : watchInternal(fieldName, defaultValue, true);
 	    const unregister = (name, options = {}) => {
 	        for (const inputName of name
 	            ? convertToArrayPayload(name)
-	            : Object.keys(fieldsNamesRef.current)) {
-	            fieldsNamesRef.current.delete(inputName);
-	            fieldArrayNamesRef.current.delete(inputName);
+	            : namesRef.current.mount) {
+	            namesRef.current.mount.delete(inputName);
+	            namesRef.current.array.delete(inputName);
 	            if (get(fieldsRef.current, inputName)) {
-	                if (!options.keepIsValid) {
-	                    unset(fieldsWithValidationRef.current, inputName);
-	                    unset(validFieldsRef.current, inputName);
-	                }
 	                !options.keepError && unset(formStateRef.current.errors, inputName);
 	                !options.keepValue && unset(fieldsRef.current, inputName);
 	                !options.keepDirty &&
 	                    unset(formStateRef.current.dirtyFields, inputName);
 	                !options.keepTouched &&
 	                    unset(formStateRef.current.touchedFields, inputName);
-	                !shouldUnregister &&
-	                    !options.keepDefaultValue &&
-	                    unset(defaultValuesRef.current, inputName);
-	                watchSubjectRef.current.next({
+	                !options.keepDefaultValue && unset(defaultValuesRef.current, inputName);
+	                subjectsRef.current.watch.next({
 	                    name: inputName,
+	                    values: getValues(),
 	                });
 	            }
 	        }
-	        formStateSubjectRef.current.next(Object.assign(Object.assign(Object.assign({}, formStateRef.current), (!options.keepDirty ? {} : { isDirty: getIsDirty() })), (resolverRef.current ? {} : { isValid: getIsValid() })));
+	        subjectsRef.current.state.next(Object.assign(Object.assign({}, formStateRef.current), (!options.keepDirty ? {} : { isDirty: getIsDirty() })));
 	        !options.keepIsValid && updateIsValid();
 	    };
 	    const registerFieldRef = (name, ref, options) => {
@@ -6826,10 +6792,8 @@
 	        let field = get(fieldsRef.current, name);
 	        const isRadioOrCheckbox = isRadioOrCheckboxFunction(ref);
 	        if (ref === field._f.ref ||
-	            (isWeb && isHTMLElement(field._f.ref) && !isHTMLElement(ref)) ||
 	            (isRadioOrCheckbox &&
-	                Array.isArray(field._f.refs) &&
-	                compact(field._f.refs).find((option) => option === ref))) {
+	                compact(field._f.refs || []).find((option) => option === ref))) {
 	            return;
 	        }
 	        field = {
@@ -6840,24 +6804,15 @@
 	                    ], ref: { type: ref.type, name } }) : Object.assign(Object.assign({}, field._f), { ref }),
 	        };
 	        set(fieldsRef.current, name, field);
-	        const defaultValue = updateValidAndValue(name, options, ref, true);
-	        if (isRadioOrCheckbox && Array.isArray(defaultValue)
-	            ? !deepEqual(get(fieldsRef.current, name)._f.value, defaultValue)
-	            : isUndefined$1(get(fieldsRef.current, name)._f.value)) {
-	            get(fieldsRef.current, name)._f.value = getFieldValue(get(fieldsRef.current, name));
-	        }
+	        updateIsValidAndInputValue(name, ref);
 	    };
-	    const register = React__namespace.useCallback((name, options) => {
-	        const isInitialRegister = !get(fieldsRef.current, name);
+	    const register = React__namespace.useCallback((name, options = {}) => {
+	        const field = get(fieldsRef.current, name);
 	        set(fieldsRef.current, name, {
-	            _f: Object.assign(Object.assign(Object.assign({}, (isInitialRegister
-	                ? { ref: { name } }
-	                : Object.assign({ ref: (get(fieldsRef.current, name)._f || {}).ref }, get(fieldsRef.current, name)._f))), { name }), options),
+	            _f: Object.assign(Object.assign(Object.assign({}, (field && field._f ? field._f : { ref: { name } })), { name, mount: true }), options),
 	        });
-	        hasValidation(options) &&
-	            set(fieldsWithValidationRef.current, name, true);
-	        fieldsNamesRef.current.add(name);
-	        isInitialRegister && updateValidAndValue(name, options);
+	        namesRef.current.mount.add(name);
+	        !field && updateIsValidAndInputValue(name);
 	        return isWindowUndefined
 	            ? { name: name }
 	            : {
@@ -6865,29 +6820,42 @@
 	                onChange: handleChange,
 	                onBlur: handleChange,
 	                ref: (ref) => {
-	                    ref
-	                        ? registerFieldRef(name, ref, options)
-	                        : (shouldUnregister || (options && options.shouldUnregister)) &&
-	                            isWeb &&
-	                            unregisterFieldsNamesRef.current.add(name);
+	                    if (ref) {
+	                        registerFieldRef(name, ref, options);
+	                    }
+	                    else {
+	                        const field = get(fieldsRef.current, name, {});
+	                        const shouldUnmount = shouldUnregister || options.shouldUnregister;
+	                        if (field._f) {
+	                            field._f.mount = false;
+	                            // If initial state of field element is disabled,
+	                            // value is not set on first "register"
+	                            // re-sync the value in when it switched to enabled
+	                            if (isUndefined$1(field._f.value)) {
+	                                field._f.value = field._f.ref.value;
+	                            }
+	                        }
+	                        shouldUnmount &&
+	                            !(isNameInFieldArray(namesRef.current.array, name) &&
+	                                inFieldArrayActionRef.current) &&
+	                            namesRef.current.unMount.add(name);
+	                    }
 	                },
 	            };
-	    }, [defaultValuesRef.current]);
+	    }, []);
 	    const handleSubmit = React__namespace.useCallback((onValid, onInvalid) => async (e) => {
 	        if (e) {
 	            e.preventDefault && e.preventDefault();
 	            e.persist && e.persist();
 	        }
-	        let fieldValues = Object.assign(Object.assign({}, (shouldUnregister ? {} : defaultValuesRef.current)), getFieldsValues(fieldsRef));
-	        formStateSubjectRef.current.next({
+	        let hasNoPromiseError = true;
+	        let fieldValues = getFieldsValues(fieldsRef);
+	        subjectsRef.current.state.next({
 	            isSubmitting: true,
 	        });
 	        try {
-	            if (resolverRef.current) {
-	                const { errors, values } = await resolverRef.current(fieldValues, contextRef.current, {
-	                    criteriaMode,
-	                    fields: getFields(fieldsNamesRef.current, fieldsRef.current),
-	                });
+	            if (resolver) {
+	                const { errors, values } = await resolverRef.current(fieldValues, contextRef.current, getResolverOptions(namesRef.current.mount, fieldsRef.current, criteriaMode));
 	                formStateRef.current.errors = errors;
 	                fieldValues = values;
 	            }
@@ -6896,7 +6864,7 @@
 	            }
 	            if (isEmptyObject(formStateRef.current.errors) &&
 	                Object.keys(formStateRef.current.errors).every((name) => get(fieldValues, name))) {
-	                formStateSubjectRef.current.next({
+	                subjectsRef.current.state.next({
 	                    errors: {},
 	                    isSubmitting: true,
 	                });
@@ -6905,61 +6873,53 @@
 	            else {
 	                onInvalid && (await onInvalid(formStateRef.current.errors, e));
 	                shouldFocusError &&
-	                    focusFieldBy(fieldsRef.current, (key) => get(formStateRef.current.errors, key), fieldsNamesRef.current);
+	                    focusFieldBy(fieldsRef.current, (key) => get(formStateRef.current.errors, key), namesRef.current.mount);
 	            }
+	        }
+	        catch (err) {
+	            hasNoPromiseError = false;
+	            throw err;
 	        }
 	        finally {
 	            formStateRef.current.isSubmitted = true;
-	            formStateSubjectRef.current.next({
+	            subjectsRef.current.state.next({
 	                isSubmitted: true,
 	                isSubmitting: false,
-	                isSubmitSuccessful: isEmptyObject(formStateRef.current.errors),
+	                isSubmitSuccessful: isEmptyObject(formStateRef.current.errors) && hasNoPromiseError,
 	                submitCount: formStateRef.current.submitCount + 1,
 	                errors: formStateRef.current.errors,
 	            });
 	        }
 	    }, [shouldFocusError, isValidateAllFieldCriteria, criteriaMode]);
-	    const resetFromState = React__namespace.useCallback(({ keepErrors, keepDirty, keepIsSubmitted, keepTouched, keepDefaultValues, keepIsValid, keepSubmitCount, }, values) => {
-	        if (!keepIsValid) {
-	            validFieldsRef.current = {};
-	            fieldsWithValidationRef.current = {};
+	    const registerAbsentFields = (defaultValues, name = '') => {
+	        for (const key in defaultValues) {
+	            const value = defaultValues[key];
+	            const fieldName = name + (name ? '.' : '') + key;
+	            const field = get(fieldsRef.current, fieldName);
+	            if (!field || !field._f) {
+	                if (isObject(value) || Array.isArray(value)) {
+	                    registerAbsentFields(value, fieldName);
+	                }
+	                else if (!field) {
+	                    register(fieldName, { value });
+	                }
+	            }
 	        }
-	        watchFieldsRef.current = new Set();
-	        isWatchAllRef.current = false;
-	        formStateSubjectRef.current.next({
-	            submitCount: keepSubmitCount ? formStateRef.current.submitCount : 0,
-	            isDirty: keepDirty
-	                ? formStateRef.current.isDirty
-	                : keepDefaultValues
-	                    ? deepEqual(values, defaultValuesRef.current)
-	                    : false,
-	            isSubmitted: keepIsSubmitted ? formStateRef.current.isSubmitted : false,
-	            isValid: keepIsValid
-	                ? formStateRef.current.isValid
-	                : !!updateIsValid(values),
-	            dirtyFields: keepDirty ? formStateRef.current.dirtyFields : {},
-	            touchedFields: keepTouched ? formStateRef.current.touchedFields : {},
-	            errors: keepErrors ? formStateRef.current.errors : {},
-	            isSubmitting: false,
-	            isSubmitSuccessful: false,
-	        });
-	    }, []);
+	    };
 	    const reset = (values, keepStateOptions = {}) => {
 	        const updatedValues = values || defaultValuesRef.current;
 	        if (isWeb && !keepStateOptions.keepValues) {
-	            for (const name of fieldsNamesRef.current) {
+	            for (const name of namesRef.current.mount) {
 	                const field = get(fieldsRef.current, name);
 	                if (field && field._f) {
 	                    const inputRef = Array.isArray(field._f.refs)
 	                        ? field._f.refs[0]
 	                        : field._f.ref;
-	                    if (isHTMLElement(inputRef)) {
-	                        try {
-	                            inputRef.closest('form').reset();
-	                            break;
-	                        }
-	                        catch (_a) { }
+	                    try {
+	                        isHTMLElement(inputRef) && inputRef.closest('form').reset();
+	                        break;
 	                    }
+	                    catch (_a) { }
 	                }
 	            }
 	        }
@@ -6967,23 +6927,55 @@
 	            (defaultValuesRef.current = Object.assign({}, updatedValues));
 	        if (!keepStateOptions.keepValues) {
 	            fieldsRef.current = {};
-	            controllerSubjectRef.current.next({
+	            subjectsRef.current.control.next({
 	                values: Object.assign({}, updatedValues),
 	            });
-	            watchSubjectRef.current.next({
-	                value: Object.assign({}, updatedValues),
+	            subjectsRef.current.watch.next({
+	                values: Object.assign({}, updatedValues),
 	            });
-	            fieldArraySubjectRef.current.next({
-	                fields: Object.assign({}, updatedValues),
+	            subjectsRef.current.array.next({
+	                values: Object.assign({}, updatedValues),
 	                isReset: true,
 	            });
 	        }
-	        resetFromState(keepStateOptions, values);
-	        isMountedRef.current = false;
+	        !keepStateOptions.keepDefaultValues &&
+	            !shouldUnregister &&
+	            registerAbsentFields(Object.assign({}, updatedValues));
+	        namesRef.current = {
+	            mount: new Set(),
+	            unMount: new Set(),
+	            array: new Set(),
+	            watch: new Set(),
+	            watchAll: false,
+	        };
+	        subjectsRef.current.state.next({
+	            submitCount: keepStateOptions.keepSubmitCount
+	                ? formStateRef.current.submitCount
+	                : 0,
+	            isDirty: keepStateOptions.keepDirty
+	                ? formStateRef.current.isDirty
+	                : keepStateOptions.keepDefaultValues
+	                    ? deepEqual(values, defaultValuesRef.current)
+	                    : false,
+	            isSubmitted: keepStateOptions.keepIsSubmitted
+	                ? formStateRef.current.isSubmitted
+	                : false,
+	            dirtyFields: keepStateOptions.keepDirty
+	                ? formStateRef.current.dirtyFields
+	                : {},
+	            touchedFields: keepStateOptions.keepTouched
+	                ? formStateRef.current.touchedFields
+	                : {},
+	            errors: keepStateOptions.keepErrors ? formStateRef.current.errors : {},
+	            isSubmitting: false,
+	            isSubmitSuccessful: false,
+	        });
+	        isMountedRef.current = !!keepStateOptions.keepIsValid;
 	    };
 	    const setFocus = (name) => get(fieldsRef.current, name)._f.ref.focus();
 	    React__namespace.useEffect(() => {
-	        const formStateSubscription = formStateSubjectRef.current.subscribe({
+	        !shouldUnregister && registerAbsentFields(defaultValuesRef.current);
+	        const formStateSubscription = subjectsRef.current.state.subscribe({
 	            next(formState) {
 	                if (shouldRenderFormState(formState, readFormStateRef.current, true)) {
 	                    formStateRef.current = Object.assign(Object.assign({}, formStateRef.current), formState);
@@ -6991,56 +6983,52 @@
 	                }
 	            },
 	        });
-	        const useFieldArraySubscription = fieldArraySubjectRef.current.subscribe({
+	        const useFieldArraySubscription = subjectsRef.current.array.subscribe({
 	            next(state) {
-	                if (state.fields && state.name && readFormStateRef.current.isValid) {
+	                if (state.values && state.name && readFormStateRef.current.isValid) {
 	                    const values = getFieldsValues(fieldsRef);
-	                    set(values, state.name, state.fields);
+	                    set(values, state.name, state.values);
 	                    updateIsValid(values);
 	                }
 	            },
 	        });
-	        resolverRef.current && readFormStateRef.current.isValid && updateIsValid();
 	        return () => {
-	            watchSubjectRef.current.unsubscribe();
 	            formStateSubscription.unsubscribe();
 	            useFieldArraySubscription.unsubscribe();
 	        };
 	    }, []);
 	    React__namespace.useEffect(() => {
 	        const isLiveInDom = (ref) => !isHTMLElement(ref) || !document.contains(ref);
-	        isMountedRef.current = true;
-	        unregisterFieldsNamesRef.current.forEach((name) => {
+	        if (!isMountedRef.current) {
+	            isMountedRef.current = true;
+	            readFormStateRef.current.isValid && updateIsValid();
+	        }
+	        for (const name of namesRef.current.unMount) {
 	            const field = get(fieldsRef.current, name);
 	            field &&
 	                (field._f.refs
 	                    ? field._f.refs.every(isLiveInDom)
 	                    : isLiveInDom(field._f.ref)) &&
 	                unregister(name);
-	        });
-	        unregisterFieldsNamesRef.current = new Set();
+	        }
+	        namesRef.current.unMount = new Set();
 	    });
 	    return {
 	        control: React__namespace.useMemo(() => ({
 	            register,
-	            isWatchAllRef,
-	            watchFieldsRef,
+	            inFieldArrayActionRef,
 	            getIsDirty,
-	            formStateSubjectRef,
-	            fieldArraySubjectRef,
-	            controllerSubjectRef,
-	            watchSubjectRef,
+	            subjectsRef,
 	            watchInternal,
 	            fieldsRef,
-	            validFieldsRef,
-	            fieldsWithValidationRef,
-	            fieldArrayNamesRef,
+	            updateIsValid,
+	            namesRef,
 	            readFormStateRef,
 	            formStateRef,
 	            defaultValuesRef,
 	            fieldArrayDefaultValuesRef,
 	            unregister,
-	            shouldUnmountUnregister: shouldUnregister,
+	            shouldUnmount: shouldUnregister,
 	        }), []),
 	        formState: getProxyFormState(isProxyEnabled, formState, readFormStateRef),
 	        trigger,
@@ -7062,24 +7050,20 @@
 	    const methods = useFormContext();
 	    const nameRef = React__namespace.useRef(name);
 	    nameRef.current = name;
-	    const { watchInternal, watchSubjectRef } = control || methods.control;
+	    const { watchInternal, subjectsRef } = control || methods.control;
 	    const [value, updateValue] = React__namespace.useState(isUndefined$1(defaultValue)
 	        ? watchInternal(name)
 	        : defaultValue);
 	    React__namespace.useEffect(() => {
 	        watchInternal(name);
-	        const watchSubscription = watchSubjectRef.current.subscribe({
-	            next: ({ name: inputName, value }) => (!nameRef.current ||
+	        const watchSubscription = subjectsRef.current.watch.subscribe({
+	            next: ({ name: inputName, values }) => (!nameRef.current ||
 	                !inputName ||
 	                convertToArrayPayload(nameRef.current).some((fieldName) => inputName &&
 	                    fieldName &&
 	                    (fieldName.startsWith(inputName) ||
 	                        inputName.startsWith(fieldName)))) &&
-	                updateValue(isString$1(inputName) &&
-	                    nameRef.current === inputName &&
-	                    !isUndefined$1(value)
-	                    ? value
-	                    : watchInternal(nameRef.current, defaultValue)),
+	                updateValue(watchInternal(nameRef.current, defaultValue, false, values)),
 	        });
 	        return () => watchSubscription.unsubscribe();
 	    }, []);
@@ -7088,7 +7072,9 @@
 
 	var s$1=function(s){var t=s.as,a=s.errors,m=s.name,o=s.message,i=s.render,l=function(e,r){if(null==e)return {};var n,s,t={},a=Object.keys(e);for(s=0;s<a.length;s++)r.indexOf(n=a[s])>=0||(t[n]=e[n]);return t}(s,["as","errors","name","message","render"]),f=useFormContext(),c=get(a||f.formState.errors,m);if(!c)return null;var g=c.message,u=c.types,d=Object.assign({},l,{children:g||o});return React__namespace.isValidElement(t)?React__namespace.cloneElement(t,d):i?i({message:g||o,messages:u}):React__namespace.createElement(t||React__namespace.Fragment,d)};
 
-	var reactDomFactories = createCommonjsModule(function (module, exports) {
+	var reactDomFactories = {exports: {}};
+
+	(function (module, exports) {
 
 	/**
 	 * Copyright (c) 2015-present, Facebook, Inc.
@@ -7262,7 +7248,11 @@
 	  // otherwise it will be defined as global variable.
 	  return ReactDOMFactories;
 	});
-	});
+	}(reactDomFactories));
+
+	var ReactDOMElements = reactDomFactories.exports;
+
+	var uaParser = {exports: {}};
 
 	/*!@license
 	 * UAParser.js v0.7.28
@@ -7273,7 +7263,7 @@
 	 * Licensed under MIT License
 	 */
 
-	var uaParser = createCommonjsModule(function (module, exports) {
+	(function (module, exports) {
 	(function (window, undefined$1) {
 
 	    //////////////
@@ -8154,7 +8144,9 @@
 	    }
 
 	})(typeof window === 'object' ? window : commonjsGlobal);
-	});
+	}(uaParser, uaParser.exports));
+
+	var UAParser = uaParser.exports;
 
 	var global$1 = typeof global$1 !== "undefined"
 	    ? global$1
@@ -8316,7 +8308,7 @@
 	            }
 	            const uastring = window.navigator.userAgent;
 	            //@ts-ignore
-	            const parser = new uaParser();
+	            const parser = new UAParser();
 	            parser.setUA(uastring);
 	            const parseUserAgent = parser.getResult();
 	            // console.log({ parseUserAgent, });
@@ -8739,7 +8731,7 @@
 	 *
 	 */
 
-
+	var _assign = objectAssign;
 
 	// -- Inlined from fbjs --
 
@@ -8775,7 +8767,7 @@
 	  return fn;
 	}
 
-	function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
+	function factory$1(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 	  /**
 	   * Policies that describe methods in `ReactClassInterface`.
 	   */
@@ -9083,14 +9075,14 @@
 	      }
 	    },
 	    childContextTypes: function(Constructor, childContextTypes) {
-	      Constructor.childContextTypes = objectAssign(
+	      Constructor.childContextTypes = _assign(
 	        {},
 	        Constructor.childContextTypes,
 	        childContextTypes
 	      );
 	    },
 	    contextTypes: function(Constructor, contextTypes) {
-	      Constructor.contextTypes = objectAssign(
+	      Constructor.contextTypes = _assign(
 	        {},
 	        Constructor.contextTypes,
 	        contextTypes
@@ -9111,7 +9103,7 @@
 	      }
 	    },
 	    propTypes: function(Constructor, propTypes) {
-	      Constructor.propTypes = objectAssign({}, Constructor.propTypes, propTypes);
+	      Constructor.propTypes = _assign({}, Constructor.propTypes, propTypes);
 	    },
 	    statics: function(Constructor, statics) {
 	      mixStaticSpecIntoComponent(Constructor, statics);
@@ -9417,7 +9409,7 @@
 	  };
 
 	  var ReactClassComponent = function() {};
-	  objectAssign(
+	  _assign(
 	    ReactClassComponent.prototype,
 	    ReactComponent.prototype,
 	    ReactClassMixin
@@ -9494,7 +9486,7 @@
 	  return createClass;
 	}
 
-	var factory_1 = factory;
+	var factory_1 = factory$1;
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
@@ -9504,10 +9496,10 @@
 	 *
 	 */
 
+	var React = React__default['default'];
+	var factory = factory_1;
 
-
-
-	if (typeof React__default['default'] === 'undefined') {
+	if (typeof React === 'undefined') {
 	  throw Error(
 	    'create-react-class could not find the React object. If you are using script tags, ' +
 	      'make sure that React is being loaded before create-react-class.'
@@ -9515,11 +9507,11 @@
 	}
 
 	// Hack to grab NoopUpdateQueue from isomorphic React
-	var ReactNoopUpdateQueue = new React__default['default'].Component().updater;
+	var ReactNoopUpdateQueue = new React.Component().updater;
 
-	var createReactClass = factory_1(
-	  React__default['default'].Component,
-	  React__default['default'].isValidElement,
+	var createReactClass = factory(
+	  React.Component,
+	  React.isValidElement,
 	  ReactNoopUpdateQueue
 	);
 
@@ -9537,7 +9529,7 @@
 	 
 	 */
 	//@ts-ignore
-	let componentMap$1 = Object.assign({ Fragment: React.Fragment, Suspense: React.Suspense }, reactDomFactories, window && typeof window === "object" ? window.__jsonx_custom_elements : {});
+	let componentMap$1 = Object.assign({ Fragment: React$1.Fragment, Suspense: React$1.Suspense }, ReactDOMElements, window && typeof window === "object" ? window.__jsonx_custom_elements : {});
 	/**
 	 * getBoundedComponents returns reactComponents with certain elements that have this bounded to select components in the boundedComponents list
 	 
@@ -9613,7 +9605,7 @@
 	            return jsonx.component;
 	            //@ts-ignore
 	        }
-	        else if (jsonx.component && reactDomFactories[jsonx.component]) {
+	        else if (jsonx.component && ReactDOMElements[jsonx.component]) {
 	            return jsonx.component;
 	            //@ts-ignore
 	        }
@@ -9680,7 +9672,7 @@
 	    // console.log('reactComponent',reactComponent)
 	    if (options.lazy) {
 	        //@ts-ignore
-	        return React.lazy(() => options
+	        return React$1.lazy(() => options
 	            .lazy(reactComponent, Object.assign({}, options, { lazy: false }))
 	            .then((lazyComponent) => {
 	            return {
@@ -9796,7 +9788,7 @@
 	            props: Object.assign({ onSubmit: onSubmit ? reactHookForm.handleSubmit(onSubmit) : undefined, key: formKey ? `formWrapperJXM-${formKey}` : undefined }, formWrapperProps)
 	        };
 	        formWrapperJXM.children = Array.isArray(formComponent) ? formComponent : [formComponent];
-	        const renderJSONX = React.useMemo(() => getReactElementFromJSONX.bind(context), [
+	        const renderJSONX = React$1.useMemo(() => getReactElementFromJSONX.bind(context), [
 	            context
 	        ]);
 	        return renderJSONX(formWrapperJXM) || null;
@@ -9831,24 +9823,24 @@
 	        const jsonx = Object.assign({}, props.jsonx);
 	        jsonx.props = Object.assign(Object.assign({}, jsonx.props), componentProps);
 	        const context = this || {};
-	        const [state, setState] = React.useState({
+	        const [state, setState] = React$1.useState({
 	            hasLoaded: false,
 	            hasError: false,
 	            resources: {},
 	            error: undefined
 	        });
-	        const transformer = React.useMemo(() => getFunctionFromEval(transformFunction), [
+	        const transformer = React$1.useMemo(() => getFunctionFromEval(transformFunction), [
 	            transformFunction
 	        ]);
-	        const timeoutFunction = React.useMemo(() => getFunctionFromEval(cacheTimeoutFunction), [cacheTimeoutFunction]);
-	        const renderJSONX = React.useMemo(() => getReactElementFromJSONX.bind(context), [
+	        const timeoutFunction = React$1.useMemo(() => getFunctionFromEval(cacheTimeoutFunction), [cacheTimeoutFunction]);
+	        const renderJSONX = React$1.useMemo(() => getReactElementFromJSONX.bind(context), [
 	            context
 	        ]);
-	        const loadingComponent = React.useMemo(() => renderJSONX(loadingJSONX), [
+	        const loadingComponent = React$1.useMemo(() => renderJSONX(loadingJSONX), [
 	            loadingJSONX
 	        ]);
-	        const loadingError = React.useMemo(() => renderJSONX(loadingErrorJSONX, { error: state.error }), [loadingErrorJSONX, state.error]);
-	        React.useEffect(() => {
+	        const loadingError = React$1.useMemo(() => renderJSONX(loadingErrorJSONX, { error: state.error }), [loadingErrorJSONX, state.error]);
+	        React$1.useEffect(() => {
 	            function getData() {
 	                return __awaiter(this, void 0, void 0, function* () {
 	                    try {
@@ -9946,7 +9938,7 @@
 	function getReactFunctionComponent(reactComponent = {}, functionBody = "", options = {}) {
 	    if (options.lazy) {
 	        //@ts-ignore
-	        return React.lazy(() => options
+	        return React$1.lazy(() => options
 	            .lazy(reactComponent, functionBody, Object.assign({}, options, { lazy: false }))
 	            .then((lazyComponent) => {
 	            return {
@@ -9962,16 +9954,16 @@
 	    const props = Object.assign({}, reactComponent.props);
 	    const functionArgs = [
 	        React__default['default'],
-	        React.useState,
-	        React.useEffect,
-	        React.useContext,
-	        React.useReducer,
-	        React.useCallback,
-	        React.useMemo,
-	        React.useRef,
-	        React.useImperativeHandle,
-	        React.useLayoutEffect,
-	        React.useDebugValue,
+	        React$1.useState,
+	        React$1.useEffect,
+	        React$1.useContext,
+	        React$1.useReducer,
+	        React$1.useCallback,
+	        React$1.useMemo,
+	        React$1.useRef,
+	        React$1.useImperativeHandle,
+	        React$1.useLayoutEffect,
+	        React$1.useDebugValue,
 	        getReactElementFromJSONX,
 	        reactComponent,
 	        resources,
@@ -9989,18 +9981,24 @@
     const self = this || {};
 
     return function ${options.name || "Anonymous"}(props){
-      ${functionBody}
-      if(typeof exposeprops==='undefined' || exposeprops){
-        reactComponent.props = Object.assign({},props,typeof exposeprops==='undefined'?{}:exposeprops);
-        if(typeof exposeprops!=='undefined') reactComponent.__functionargs = Object.keys(exposeprops);
-      } else{
-        reactComponent.props =  props;
+      try {
+        ${functionBody}
+        if(typeof exposeprops==='undefined' || exposeprops){
+          reactComponent.props = Object.assign({},props,typeof exposeprops==='undefined'?{}:exposeprops);
+          if(typeof exposeprops!=='undefined') reactComponent.__functionargs = Object.keys(exposeprops);
+        } else{
+          reactComponent.props =  props;
+        }
+        if(!props?.children) {
+        //  delete props.children;
+        }
+        const context = ${options.bind ? "Object.assign(self,this||{})" : "this"};
+        return getReactElementFromJSONX.call(context, reactComponent);
+
+      } catch(e){
+        if(self.debug) return e.toString()
+        else throw e
       }
-      if(!props?.children) {
-      //  delete props.children;
-      }
-      const context = ${options.bind ? "Object.assign(self,this||{})" : "this"};
-      return getReactElementFromJSONX.call(context, reactComponent);
     }
   `);
 	    if (options.name) {
@@ -10053,8 +10051,14 @@
 	 *
 	 */
 	function getReactContext(options = {}) {
-	    return React.createContext(options.value);
+	    return React$1.createContext(options.value);
 	}
+	/**
+	 * generates react function components from a json definition
+	 * @property {object} this
+	 * @param customComponent
+	 * @returns {function} returns react functional component
+	 */
 	function getCustomFunctionComponent(customComponent) {
 	    const { options, functionBody, functionComponent, jsonxComponent, } = customComponent;
 	    if (functionComponent) {
@@ -10064,6 +10068,11 @@
 	        return getReactFunctionComponent.call(this, jsonxComponent, functionBody, options);
 	    }
 	}
+	/**
+	 * returns a cache key of custom components names
+	 * @param customComponents
+	 * @returns {string} cachekey
+	 */
 	function getCustomComponentsCacheKey(customComponents) {
 	    return customComponents.map(({ name }) => name).join('');
 	}
@@ -10105,6 +10114,7 @@
 	    const customComponentsCacheKey = getCustomComponentsCacheKey(customComponents);
 	    if (generatedCustomComponents.has(customComponentsCacheKey))
 	        return generatedCustomComponents.get(customComponentsCacheKey);
+	    const cxt = Object.assign({ componentLibraries: {}, reactComponents: {} }, this);
 	    const customComponentLibraries = {};
 	    const customReactComponents = {};
 	    if (customComponents && customComponents.length) {
@@ -10128,6 +10138,7 @@
 	                }
 	                else
 	                    customComponentLibraries[name] = window[name];
+	                cxt.componentLibraries[name] = customComponentLibraries[name];
 	            }
 	            else if (type === "component") {
 	                if (jsonx) {
@@ -10135,13 +10146,15 @@
 	                }
 	                else
 	                    customReactComponents[name] = window[name];
+	                cxt.reactComponents[name] = customReactComponents[name];
 	            }
 	            else if (type === "function") {
-	                if (jsonx) {
+	                if (functionComponent || functionBody) {
 	                    customReactComponents[name] = getCustomFunctionComponent.call(this, { options, functionBody, functionComponent, jsonxComponent: jsonx, });
 	                }
 	                else
 	                    customReactComponents[name] = window[name];
+	                cxt.reactComponents[name] = customReactComponents[name];
 	            }
 	        });
 	    }
@@ -10932,6 +10945,8 @@
 		getComputedProps: getComputedProps$1
 	});
 
+	var numeral$1 = {exports: {}};
+
 	/*! @preserve
 	 * numeral.js
 	 * version : 2.0.6
@@ -10940,7 +10955,7 @@
 	 * http://adamwdraper.github.com/Numeral-js/
 	 */
 
-	var numeral = createCommonjsModule(function (module) {
+	(function (module) {
 	(function (global, factory) {
 	    if (module.exports) {
 	        module.exports = factory();
@@ -11940,7 +11955,9 @@
 
 	return numeral;
 	}));
-	});
+	}(numeral$1));
+
+	var numeral = numeral$1.exports;
 
 	// these aren't really private, but nor are they really useful to document
 
@@ -12530,11 +12547,11 @@
 	function months(length) {
 	  switch (length) {
 	    case "narrow":
-	      return monthsNarrow;
+	      return [...monthsNarrow];
 	    case "short":
-	      return monthsShort;
+	      return [...monthsShort];
 	    case "long":
-	      return monthsLong;
+	      return [...monthsLong];
 	    case "numeric":
 	      return ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 	    case "2-digit":
@@ -12561,11 +12578,11 @@
 	function weekdays(length) {
 	  switch (length) {
 	    case "narrow":
-	      return weekdaysNarrow;
+	      return [...weekdaysNarrow];
 	    case "short":
-	      return weekdaysShort;
+	      return [...weekdaysShort];
 	    case "long":
-	      return weekdaysLong;
+	      return [...weekdaysLong];
 	    case "numeric":
 	      return ["1", "2", "3", "4", "5", "6", "7"];
 	    default:
@@ -12584,11 +12601,11 @@
 	function eras(length) {
 	  switch (length) {
 	    case "narrow":
-	      return erasNarrow;
+	      return [...erasNarrow];
 	    case "short":
-	      return erasShort;
+	      return [...erasShort];
 	    case "long":
-	      return erasLong;
+	      return [...erasLong];
 	    default:
 	      return null;
 	  }
@@ -13372,7 +13389,7 @@
 	  /** @ignore */
 	  static parseGMTOffset(specifier) {
 	    if (specifier) {
-	      const match = specifier.match(/^Etc\/GMT([+-]\d{1,2})$/i);
+	      const match = specifier.match(/^Etc\/GMT(0|[+-]\d{1,2})$/i);
 	      if (match) {
 	        return -60 * parseInt(match[1]);
 	      }
@@ -13415,8 +13432,11 @@
 
 	  /** @override **/
 	  offset(ts) {
-	    const date = new Date(ts),
-	      dtf = makeDTF(this.name),
+	    const date = new Date(ts);
+
+	    if (isNaN(date)) return NaN;
+
+	    const dtf = makeDTF(this.name),
 	      [year, month, day, hour, minute, second] = dtf.formatToParts
 	        ? partsOffset(dtf, date)
 	        : hackyOffset(dtf, date),
@@ -13937,11 +13957,15 @@
 	    if (dt.zone.universal && this.hasIntl) {
 	      // UTC-8 or Etc/UTC-8 are not part of tzdata, only Etc/GMT+8 and the like.
 	      // That is why fixed-offset TZ is set to that unless it is:
-	      // 1. Outside of the supported range Etc/GMT-14 to Etc/GMT+12.
-	      // 2. Not a whole hour, e.g. UTC+4:30.
+	      // 1. Representing offset 0 when UTC is used to maintain previous behavior and does not become GMT.
+	      // 2. Unsupported by the browser:
+	      //    - some do not support Etc/
+	      //    - < Etc/GMT-14, > Etc/GMT+12, and 30-minute or 45-minute offsets are not part of tzdata
 	      const gmtOffset = -1 * (dt.offset / 60);
-	      if (gmtOffset >= -14 && gmtOffset <= 12 && gmtOffset % 1 === 0) {
-	        z = gmtOffset >= 0 ? `Etc/GMT+${gmtOffset}` : `Etc/GMT${gmtOffset}`;
+	      const offsetZ = gmtOffset >= 0 ? `Etc/GMT+${gmtOffset}` : `Etc/GMT${gmtOffset}`;
+	      const isOffsetZoneSupported = IANAZone.isValidZone(offsetZ);
+	      if (dt.offset !== 0 && isOffsetZoneSupported) {
+	        z = offsetZ;
 	        this.dt = dt;
 	      } else {
 	        // Not all fixed-offset zones like Etc/+4:30 are present in tzdata.
@@ -14358,8 +14382,10 @@
 	  ] = match;
 
 	  const hasNegativePrefix = s[0] === "-";
+	  const negativeSeconds = secondStr && secondStr[0] === "-";
 
-	  const maybeNegate = num => (num && hasNegativePrefix ? -num : num);
+	  const maybeNegate = (num, force = false) =>
+	    num !== undefined && (force || (num && hasNegativePrefix)) ? -num : num;
 
 	  return [
 	    {
@@ -14369,8 +14395,8 @@
 	      days: maybeNegate(parseInteger(dayStr)),
 	      hours: maybeNegate(parseInteger(hourStr)),
 	      minutes: maybeNegate(parseInteger(minuteStr)),
-	      seconds: maybeNegate(parseInteger(secondStr)),
-	      milliseconds: maybeNegate(parseMillis(millisecondsStr))
+	      seconds: maybeNegate(parseInteger(secondStr), secondStr === "-0"),
+	      milliseconds: maybeNegate(parseMillis(millisecondsStr), negativeSeconds)
 	    }
 	  ];
 	}
@@ -15126,9 +15152,9 @@
 	  /**
 	   * Get the value of unit.
 	   * @param {string} unit - a unit such as 'minute' or 'day'
-	   * @example Duration.fromObject({years: 2, days: 3}).years //=> 2
-	   * @example Duration.fromObject({years: 2, days: 3}).months //=> 0
-	   * @example Duration.fromObject({years: 2, days: 3}).days //=> 3
+	   * @example Duration.fromObject({years: 2, days: 3}).get('years') //=> 2
+	   * @example Duration.fromObject({years: 2, days: 3}).get('months') //=> 0
+	   * @example Duration.fromObject({years: 2, days: 3}).get('days') //=> 3
 	   * @return {number}
 	   */
 	  get(unit) {
@@ -15748,15 +15774,16 @@
 	    }
 
 	    let { s } = this,
-	      added,
+	      idx = 1,
 	      next;
 
 	    const results = [];
 	    while (s < this.e) {
-	      added = s.plus(dur);
+	      const added = this.start.plus(dur.mapUnits(x => x * idx));
 	      next = +added > +this.e ? this.e : added;
 	      results.push(Interval.fromDateTimes(s, next));
 	      s = next;
+	      idx += 1;
 	    }
 
 	    return results;
@@ -15836,7 +15863,7 @@
 	    const s = this.s > other.s ? this.s : other.s,
 	      e = this.e < other.e ? this.e : other.e;
 
-	    if (s > e) {
+	    if (s >= e) {
 	      return null;
 	    } else {
 	      return Interval.fromDateTimes(s, e);
@@ -16059,6 +16086,7 @@
 	   * @param {Object} opts - options
 	   * @param {string} [opts.locale] - the locale code
 	   * @param {string} [opts.numberingSystem=null] - the numbering system
+	   * @param {string} [opts.locObj=null] - an existing locale object to use
 	   * @param {string} [opts.outputCalendar='gregory'] - the calendar
 	   * @example Info.months()[0] //=> 'January'
 	   * @example Info.months('short')[0] //=> 'Jan'
@@ -16070,9 +16098,9 @@
 	   */
 	  static months(
 	    length = "long",
-	    { locale = null, numberingSystem = null, outputCalendar = "gregory" } = {}
+	    { locale = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}
 	  ) {
-	    return Locale.create(locale, numberingSystem, outputCalendar).months(length);
+	    return (locObj || Locale.create(locale, numberingSystem, outputCalendar)).months(length);
 	  }
 
 	  /**
@@ -16084,14 +16112,15 @@
 	   * @param {Object} opts - options
 	   * @param {string} [opts.locale] - the locale code
 	   * @param {string} [opts.numberingSystem=null] - the numbering system
+	   * @param {string} [opts.locObj=null] - an existing locale object to use
 	   * @param {string} [opts.outputCalendar='gregory'] - the calendar
 	   * @return {[string]}
 	   */
 	  static monthsFormat(
 	    length = "long",
-	    { locale = null, numberingSystem = null, outputCalendar = "gregory" } = {}
+	    { locale = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}
 	  ) {
-	    return Locale.create(locale, numberingSystem, outputCalendar).months(length, true);
+	    return (locObj || Locale.create(locale, numberingSystem, outputCalendar)).months(length, true);
 	  }
 
 	  /**
@@ -16101,14 +16130,15 @@
 	   * @param {Object} opts - options
 	   * @param {string} [opts.locale] - the locale code
 	   * @param {string} [opts.numberingSystem=null] - the numbering system
+	   * @param {string} [opts.locObj=null] - an existing locale object to use
 	   * @example Info.weekdays()[0] //=> 'Monday'
 	   * @example Info.weekdays('short')[0] //=> 'Mon'
 	   * @example Info.weekdays('short', { locale: 'fr-CA' })[0] //=> 'lun.'
 	   * @example Info.weekdays('short', { locale: 'ar' })[0] //=> 'الاثنين'
 	   * @return {[string]}
 	   */
-	  static weekdays(length = "long", { locale = null, numberingSystem = null } = {}) {
-	    return Locale.create(locale, numberingSystem, null).weekdays(length);
+	  static weekdays(length = "long", { locale = null, numberingSystem = null, locObj = null } = {}) {
+	    return (locObj || Locale.create(locale, numberingSystem, null)).weekdays(length);
 	  }
 
 	  /**
@@ -16120,10 +16150,14 @@
 	   * @param {Object} opts - options
 	   * @param {string} [opts.locale=null] - the locale code
 	   * @param {string} [opts.numberingSystem=null] - the numbering system
+	   * @param {string} [opts.locObj=null] - an existing locale object to use
 	   * @return {[string]}
 	   */
-	  static weekdaysFormat(length = "long", { locale = null, numberingSystem = null } = {}) {
-	    return Locale.create(locale, numberingSystem, null).weekdays(length, true);
+	  static weekdaysFormat(
+	    length = "long",
+	    { locale = null, numberingSystem = null, locObj = null } = {}
+	  ) {
+	    return (locObj || Locale.create(locale, numberingSystem, null)).weekdays(length, true);
 	  }
 
 	  /**
@@ -17225,7 +17259,7 @@
 	      return format(count, unit);
 	    }
 	  }
-	  return format(0, opts.units[opts.units.length - 1]);
+	  return format(start > end ? -0 : 0, opts.units[opts.units.length - 1]);
 	}
 
 	/**
@@ -17344,7 +17378,7 @@
 	   */
 	  static local(year, month, day, hour, minute, second, millisecond) {
 	    if (isUndefined(year)) {
-	      return new DateTime({});
+	      return DateTime.now();
 	    } else {
 	      return quickDT(
 	        {
@@ -17616,8 +17650,8 @@
 	   * @param {string|Zone} [opts.zone='local'] - use this zone if no offset is specified in the input string itself. Will also convert the time to this zone
 	   * @param {boolean} [opts.setZone=false] - override the zone with a fixed-offset zone specified in the string itself, if it specifies one
 	   * @param {string} [opts.locale='system's locale'] - a locale to set on the resulting DateTime instance
-	   * @param {string} opts.outputCalendar - the output calendar to set on the resulting DateTime instance
-	   * @param {string} opts.numberingSystem - the numbering system to set on the resulting DateTime instance
+	   * @param {string} [opts.outputCalendar] - the output calendar to set on the resulting DateTime instance
+	   * @param {string} [opts.numberingSystem] - the numbering system to set on the resulting DateTime instance
 	   * @example DateTime.fromISO('2016-05-25T09:08:34.123')
 	   * @example DateTime.fromISO('2016-05-25T09:08:34.123+06:00')
 	   * @example DateTime.fromISO('2016-05-25T09:08:34.123+06:00', {setZone: true})
@@ -17920,7 +17954,7 @@
 	  /**
 	   * Get the week year
 	   * @see https://en.wikipedia.org/wiki/ISO_week_date
-	   * @example DateTime.local(2014, 11, 31).weekYear //=> 2015
+	   * @example DateTime.local(2014, 12, 31).weekYear //=> 2015
 	   * @type {number}
 	   */
 	  get weekYear() {
@@ -17964,7 +17998,7 @@
 	   * @type {string}
 	   */
 	  get monthShort() {
-	    return this.isValid ? Info.months("short", { locale: this.locale })[this.month - 1] : null;
+	    return this.isValid ? Info.months("short", { locObj: this.loc })[this.month - 1] : null;
 	  }
 
 	  /**
@@ -17974,7 +18008,7 @@
 	   * @type {string}
 	   */
 	  get monthLong() {
-	    return this.isValid ? Info.months("long", { locale: this.locale })[this.month - 1] : null;
+	    return this.isValid ? Info.months("long", { locObj: this.loc })[this.month - 1] : null;
 	  }
 
 	  /**
@@ -17984,7 +18018,7 @@
 	   * @type {string}
 	   */
 	  get weekdayShort() {
-	    return this.isValid ? Info.weekdays("short", { locale: this.locale })[this.weekday - 1] : null;
+	    return this.isValid ? Info.weekdays("short", { locObj: this.loc })[this.weekday - 1] : null;
 	  }
 
 	  /**
@@ -17994,7 +18028,7 @@
 	   * @type {string}
 	   */
 	  get weekdayLong() {
-	    return this.isValid ? Info.weekdays("long", { locale: this.locale })[this.weekday - 1] : null;
+	    return this.isValid ? Info.weekdays("long", { locObj: this.loc })[this.weekday - 1] : null;
 	  }
 
 	  /**
@@ -18204,7 +18238,22 @@
 	      settingWeekStuff =
 	        !isUndefined(normalized.weekYear) ||
 	        !isUndefined(normalized.weekNumber) ||
-	        !isUndefined(normalized.weekday);
+	        !isUndefined(normalized.weekday),
+	      containsOrdinal = !isUndefined(normalized.ordinal),
+	      containsGregorYear = !isUndefined(normalized.year),
+	      containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day),
+	      containsGregor = containsGregorYear || containsGregorMD,
+	      definiteWeekDef = normalized.weekYear || normalized.weekNumber;
+
+	    if ((containsGregor || containsOrdinal) && definiteWeekDef) {
+	      throw new ConflictingSpecificationError(
+	        "Can't mix weekYear/weekNumber units with year/month/day or ordinals"
+	      );
+	    }
+
+	    if (containsGregorMD && containsOrdinal) {
+	      throw new ConflictingSpecificationError("Can't mix ordinal dates with month/day");
+	    }
 
 	    let mixed;
 	    if (settingWeekStuff) {
@@ -18710,7 +18759,7 @@
 	   * @param {Object} options - options that affect the output
 	   * @param {DateTime} [options.base=DateTime.now()] - the DateTime to use as the basis to which this time is compared. Defaults to now.
 	   * @param {string} [options.style="long"] - the style of units, must be "long", "short", or "narrow"
-	   * @param {string} options.unit - use a specific unit; if omitted, the method will pick the unit. Use one of "years", "quarters", "months", "weeks", "days", "hours", "minutes", or "seconds"
+	   * @param {string|string[]} options.unit - use a specific unit or array of units; if omitted, or an array, the method will pick the best unit. Use an array or one of "years", "quarters", "months", "weeks", "days", "hours", "minutes", or "seconds"
 	   * @param {boolean} [options.round=true] - whether to round the numbers in the output.
 	   * @param {number} [options.padding=0] - padding in milliseconds. This allows you to round up the result if it fits inside the threshold. Don't use in combination with {round: false} because the decimal output will include the padding.
 	   * @param {string} options.locale - override the locale of this DateTime
@@ -18726,12 +18775,19 @@
 	    if (!this.isValid) return null;
 	    const base = options.base || DateTime.fromObject({ zone: this.zone }),
 	      padding = options.padding ? (this < base ? -options.padding : options.padding) : 0;
+	    let units = ["years", "months", "days", "hours", "minutes", "seconds"];
+	    let unit = options.unit;
+	    if (Array.isArray(options.unit)) {
+	      units = options.unit;
+	      unit = undefined;
+	    }
 	    return diffRelative(
 	      base,
 	      this.plus(padding),
 	      Object.assign(options, {
 	        numeric: "always",
-	        units: ["years", "months", "days", "hours", "minutes", "seconds"]
+	        units,
+	        unit
 	      })
 	    );
 	  }
@@ -19009,7 +19065,7 @@
 	  }
 	}
 
-	const VERSION = "1.26.0";
+	const VERSION = "1.27.0";
 
 	var luxon = /*#__PURE__*/Object.freeze({
 		__proto__: null,
@@ -19399,7 +19455,7 @@
 	    }
 	    else if (typeof window !== "undefined" &&
 	        typeof window.XMLHttpRequest === "function" &&
-	        (!fs.readFileSync || type === 'fetch')) {
+	        (!fs.readFileSync )) {
 	        const jsFile = fetchJSONSync(template);
 	        const jsonxModule = scopedEval$1(`(${jsFile})`);
 	        templateCache.set(template, jsonxModule);
